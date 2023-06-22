@@ -1,0 +1,10 @@
+<configs>
+	<!-- Adjust the crafting queue to the left a little to account for an extra slot -->
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect/@pos">19,0</set>
+
+	<!-- Adjust the crrafting queue width to avoid overlaps -->
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect/@width">378</set>
+
+	<!-- Add the extra slot to the columns -->
+	<set xpath="/windows/window[@name='windowCraftingQueue']/rect//@cols">5</set>
+</configs>

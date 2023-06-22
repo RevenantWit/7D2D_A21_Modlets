@@ -1,0 +1,4 @@
+<configs>
+	<!-- Adjust pack mule perk for the increased number of locked slots -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">6,12,18,24,30</set>
+</configs>

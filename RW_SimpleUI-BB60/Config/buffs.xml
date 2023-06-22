@@ -1,0 +1,18 @@
+<configs>
+	<!-- Fix for encumbrance to acccount for the increase in locked slots -->
+	<!-- default is 0.026(encumbrance) x 27(default unlocked slots) = 0.702(reduced mobilty when inventory is full) -->
+	<!-- so if we divide the default reduced mobilty when inventory is full(0.702) by mods default unlocked slots(30) we get the encumbrance value needed for the same effect(0.0234) -->
+	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0234</set>
+
+    <!-- Fix for god mode to include the new number of slots -->
+	<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">60</set>
+
+	<!-- Fix for steroids to include the new number of slots -->
+	<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">60</set>
+
+	<!-- Fix for twitch pack mule buff to include the new number of slots -->
+	<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">60</set>
+
+	<!-- Fix for twitch encumbered debuff -->
+	<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">30</set>
+</configs>

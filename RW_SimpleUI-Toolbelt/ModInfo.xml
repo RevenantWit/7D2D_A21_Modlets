@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-Toolbelt"/>
+	<DisplayName value="Simple UI Toolbelt"/>
+	<Version value="2.0.0"/>
+	<Description value="Replaces Toolbelt with one that has tabs for changing some elements in live game"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

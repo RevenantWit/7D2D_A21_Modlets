@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-CraftingQueue"/>
+	<DisplayName value="Simple UI Crafting Queue"/>
+	<Version value="2.0.0"/>
+	<Description value="Adds an extra slot to the crafting queue"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-ForgeInput"/>
+	<DisplayName value="Simple UI Forge Input"/>
+	<Version value="2.0.0"/>
+	<Description value="Adds an extra slot to the forge input"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

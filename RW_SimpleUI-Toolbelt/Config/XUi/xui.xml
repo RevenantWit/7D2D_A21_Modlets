@@ -1,0 +1,4 @@
+<configs>
+	<!-- Set the Toolbelt to use the new Toolbelt window-->
+	<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt']/@name">RevsWW_MultiBelt</set>
+</configs>

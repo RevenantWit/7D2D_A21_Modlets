@@ -1,0 +1,4 @@
+<configs>
+	<!-- Set the Left HUD to use the new Left HUD window-->
+	<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars']/@name">RevsWW_MultiHUD</set>
+</configs>

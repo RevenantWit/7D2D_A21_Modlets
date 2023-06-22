@@ -1,0 +1,22 @@
+<configs>
+	<!-- Adjust the total height of the forge input window to avoid overlaps -->
+	<set xpath="/windows/window[@name='windowForgeInput']/@height">279</set>
+
+	<!-- Adjust the height of the background inside the forge input window -->
+	<set xpath="/windows/window[@name='windowForgeInput']/sprite[@name='backgroundMain']/@height">228</set>
+
+	<!-- Adjust the height around the grid to make room for an extra slot -->
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/@height">228</set>
+
+	<!-- Add an extra row to the grid (the actual extra slot) -->
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/grid/@rows">3</set>
+
+	<!-- Adjust the height of the forge input materials section -->
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/@height">223</set>
+
+	<!-- Reposition the writing for the forge input materials slightly -->
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/grid/@pos">6,-12</set>
+
+	<!-- Adjust the cell height on the writing for the forge input materials since we have more room now -->
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/grid/@cell_height">34</set>
+</configs>

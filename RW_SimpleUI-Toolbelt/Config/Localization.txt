@@ -1,0 +1,5 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+xuiRWToolbeltTab1,UI,XUI,,,"TB\n1"
+xuiRWToolbeltTab2,UI,XUI,,,"TB\n2"
+xuiRWToolbeltTab3,UI,XUI,,,"TB\n3"
