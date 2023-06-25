@@ -1,5 +1,5 @@
 <configs>
-	<!-- Lower the main scale of the UI and stackpanel to get everything to fit -->
+	<!-- Lower the main scale of the UI and stackpanel to get everything to fit better -->
 	<set xpath="/xui/ruleset[@name='default']/@scale">1.10</set>
 	<set xpath="/xui/ruleset[@name='default']/@stackpanel_scale">0.93</set>
 </configs>

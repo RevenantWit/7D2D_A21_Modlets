@@ -1,4 +1,15 @@
 <configs>
-	<!-- Adjust pack mule perk for the increased number of locked slots -->
+	<!-- Adjust pack mule perk for the increased number of encumbered slots -->
 	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">12,24,36,48,60</set>
+
+	<!-- Fix for new twitch encumbered debuff in A21 so the completed Firemans Almanac perk doesn't override it -->
+	<insertAfter xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']//requirement[@name='InBiome']">
+			<requirement name="!HasBuff" buff="twitch_buffEncumbered"/>
+	</insertAfter>
+
+	<!-- Adjust Firemans Almanac book perk for the increased number of encumbered slots (set to max number of encumbered slots by default) -->
+	<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">60</set>
+
+	<!-- Adjust Night Stalker book perk for the increased number of encumbered slots (set to max number of encumbered slots by default) -->
+	<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">60</set>
 </configs>

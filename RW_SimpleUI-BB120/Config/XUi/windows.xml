@@ -1,15 +1,16 @@
 <configs>
+<!-- Backpack Window (windowBackpack)-->
 	<!-- Adjust the backpack window size to avoid overlapping other windows -->
 	<set xpath="/windows/window[@name='windowBackpack']/@width">1008</set>
 	<set xpath="/windows/window[@name='windowBackpack']/@height">550</set>
 
-	<!-- Reposition the buttons and info in the backpacks header -->
+	<!-- Reposition the buttons, info, and icon in the backpacks header -->
 	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']//button[@name='btnClearInventory']/@pos">400,-22</set>
 	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']//button[@name='btnSort']/@pos">100,-22</set>
 	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect//button[@name='btnMoveAll']/@pos">180,-22</set>
 	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect//button[@name='btnMoveFillAndSmart']/@pos">140,-22</set>
-	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/label[@text='{currencyamount}']/@pos">870,-8</set>
-	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/sprite[@name='costIcon']/@pos">975,-10</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/label[@text='{currencyamount}']/@pos">874,-9</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/sprite[@name='costIcon']/@pos">979,-9</set>
 
 	<!-- Add in and position the locked slots box, as well as set max lockable slots -->
  	<append xpath="/windows/window[@name='windowBackpack']/panel/rect[@controller='ContainerStandardControls']">

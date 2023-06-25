@@ -2,8 +2,8 @@
 <xml>
 	<Name value="RW_SimpleUI-BB120"/>
 	<DisplayName value="Simple UI Big Bag 120"/>
-	<Version value="2.0.0"/>
-	<Description value="Increases backpack size to 120 slots"/>
+	<Version value="2.0.1"/>
+	<Description value="Increases backpack size to 120 slots and adds lockable slots."/>
 	<Author value="RevenantWit"/>
 	<Website value=""/>
 </xml>
