@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-NoMMNP"/>
+	<DisplayName value="Simple UI No Main Menu News Panel"/>
+	<Version value="1.0.0"/>
+	<Description value="Removes the news panel from the games main menu"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

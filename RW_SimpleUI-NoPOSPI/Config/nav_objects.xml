@@ -1,0 +1,6 @@
+<configs>
+
+	<!-- remove only the on screen setting so party members still show on compass and map. -->
+	<remove xpath="/nav_object_classes/nav_object_class[@name='party']/onscreen_settings"/>
+
+</configs>

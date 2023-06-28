@@ -1,0 +1,6 @@
+<configs>
+
+	<!-- remove the news window from it's window group so it no longers gets called. -->
+	<remove xpath="/xui/ruleset/window_group[@name='mainMenu']/window[@name='newsWindow']"/>
+
+</configs>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-VVS-LockableSlots"/>
+	<DisplayName value="Simple UI VVS Lockable Slots"/>
+	<Version value="1.0.0"/>
+	<Description value="Adds lockable slots to the vanilla vehicle storage"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

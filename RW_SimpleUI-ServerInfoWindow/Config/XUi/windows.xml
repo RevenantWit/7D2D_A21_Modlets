@@ -1,0 +1,146 @@
+<configs>
+	<append xpath="/windows">
+
+		<!--Do not remove or change the controller below (TabSelector)-->
+		<window name="RevsWW_ServerInfo" anchor="CenterTop" pos="-450,-100" width="900" height="850" controller="TabSelector" cursor_area="true">
+<!--Window Header-->
+			<panel name="header" height="43" depth="1" disableautobackground="true" >
+				<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" height="43" color="[black]" type="sliced" fillcenter="true" globalopacity="false" />
+
+				<label name="serverInfoHeader" depth="2" pos="6,-6" justify="center" font_size="32" text_key="xuiRW_ServerInfoHeader" />
+			</panel>
+<!--Tab Header-->
+			<!--Do not remove or change the rect name below (tabsHeader)-->
+			<rect name="tabsHeader">
+				<grid name="tabButtons" pos="0,-45" depth="2" rows="1" cols="5" cell_width="180" cell_height="43" repeat_content="true" arrangement="horizontal">
+					<rect>
+						<simplebutton name="tabButton" depth="2" width="180" height="43" font_size="32" bordercolor="0,0,0,180" defaultcolor="[darkestGrey]" selectedsprite="menu_empty" selectedcolor="[mediumGrey]" foregroundlayer="false" />
+					</rect>
+				</grid>
+			</rect>
+
+			<!--Do not remove or change the rect name below (tabsContents)-->
+			<rect name="tabsContents" >
+<!--Tab 1-->
+				<rect name="Tab1" tab_key="xuiRW_Tab1Label" >
+					<!-- background -->
+					<panel name="Tab1contentBackground" pos="0,-90" height="750" depth="1" pivot="center" disableautobackground="true">
+						<sprite depth="6" name="border" sprite="menu_empty3px" height="750" color="[black]" type="sliced" fillcenter="false" globalopacity="true" />
+						<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="2,-2" height="746" width="896" color="[darkGrey]" type="sliced" fillcenter="true" globalopacity="true" />
+					</panel>
+
+					<!-- contents -->
+					<rect pos="10,-110" width="872">
+						<label name="Tab1ContentTitle" depth="3" height="58" justify="center" font_size="32" text_key="xuiRW_Tab1ContentTitle" />
+						<label name="Tab1Contents" depth="3" pos="0,-60" height="664" font_size="26" text_key="xuiRW_Tab1Contents" />
+					</rect>
+				</rect>
+<!--Tab 2-->
+				<rect name="Tab2" tab_key="xuiRW_Tab2Label">
+					<!-- background -->
+					<panel name="Tab2contentBackground" pos="0,-90" height="750" depth="1" pivot="center" disableautobackground="true">
+						<sprite depth="6" name="border" sprite="menu_empty3px" height="750" color="[black]" type="sliced" fillcenter="false" globalopacity="true" />
+						<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="2,-2" height="746" width="896" color="[darkGrey]" type="sliced" fillcenter="true" globalopacity="true" />
+					</panel>
+
+					<!-- contents -->
+					<rect pos="10,-110" width="872">
+						<label name="Tab2ContentTitle" depth="3" height="58" justify="center" font_size="32" text_key="xuiRW_Tab2ContentTitle" />
+						<label name="Tab2Contents" depth="3" pos="0,-60" height="664" font_size="26" text_key="xuiRW_Tab2Contents" />
+					</rect>
+				</rect>
+<!--Tab 3-->
+				<rect name="Tab3" tab_key="xuiRW_Tab3Label" >
+					<!-- background -->
+					<panel name="Tab3contentBackground" pos="0,-90" height="750" depth="1" pivot="center" disableautobackground="true">
+						<sprite depth="6" name="border" sprite="menu_empty3px" height="750" color="[black]" type="sliced" fillcenter="false" globalopacity="true" />
+						<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="2,-2" height="746" width="896" color="[darkGrey]" type="sliced" fillcenter="true" globalopacity="true" />
+					</panel>
+
+					<!-- contents -->
+					<rect pos="10,-110" width="872">
+						<label name="Tab3ContentTitle" depth="3" height="58" justify="center" font_size="32" text_key="xuiRW_Tab3ContentTitle" />
+						<label name="Tab3Contents" depth="3" pos="0,-60" height="664" font_size="26" text_key="xuiRW_Tab3Contents" />
+					</rect>
+				</rect>
+<!--Tab 4-->
+				<rect name="Tab4" tab_key="xuiRW_Tab4Label" >
+					<!-- background -->
+					<panel name="Tab4contentBackground" pos="0,-90" height="750" depth="1" pivot="center" disableautobackground="true">
+						<sprite depth="6" name="border" sprite="menu_empty3px" height="750" color="[black]" type="sliced" fillcenter="false" globalopacity="true" />
+						<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="2,-2" height="746" width="896" color="[darkGrey]" type="sliced" fillcenter="true" globalopacity="true" />
+					</panel>
+
+					<!-- contents -->
+					<rect pos="10,-110" width="872">
+						<label name="Tab4ContentTitle" depth="3" height="58" justify="center" font_size="32" text_key="xuiRW_Tab4ContentTitle" />
+						<label name="Tab4Contents" depth="3" pos="0,-60" height="664" justify="center" font_size="26" text_key="xuiRW_Tab4Contents" />
+					</rect>
+				</rect>
+<!--Tab 5-->
+				<rect name="Tab5" tab_key="xuiRW_Tab5Label" >
+					<!-- background -->
+					<panel name="Tab5contentBackground" pos="0,-90" height="750" depth="1" pivot="center" disableautobackground="true">
+						<sprite depth="6" name="border" sprite="menu_empty3px" height="750" color="[black]" type="sliced" fillcenter="false" globalopacity="true" />
+						<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="2,-2" height="746" width="896" color="[darkGrey]" type="sliced" fillcenter="true" globalopacity="true" />
+					</panel>
+
+					<!-- contents -->
+					<rect pos="10,-110" width="872">
+						<label name="Tab5ContentTitle" depth="3" height="58" justify="center" font_size="32" text_key="xuiRW_Tab5ContentTitle" />
+						<rect name="Tab5Contents" height="664" >
+							<!--Do not remove or change the controller below (ServerInfo)-->
+							<rect name="Link1" pos="0,-80" controller="ServerInfo">
+								<label name="Link1Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link1Title" />
+								<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+								<label name="ServerDescription" />
+								<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link1URL"/>
+							</rect>
+
+							<!--Do not remove or change the controller below (ServerInfo)-->
+							<rect name="Link2" pos="0,-180" controller="ServerInfo">
+								<label name="Link2Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link2Title" />
+								<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+								<label name="ServerDescription" />
+								<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link2URL"/>
+							</rect>
+
+							<!--Do not remove or change the controller below (ServerInfo)-->
+							<rect name="Link3" pos="0,-280" controller="ServerInfo">
+								<label name="Link3Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link3Title" />
+								<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+								<label name="ServerDescription" />
+								<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link3URL"/>
+							</rect>
+
+							<!--Do not remove or change the controller below (ServerInfo)-->
+							<rect name="Link4" pos="0,-380" controller="ServerInfo">
+								<label name="Link4Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link4Title" />
+								<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+								<label name="ServerDescription" />
+								<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link4URL"/>
+							</rect>
+
+							<!--Do not remove or change the controller below (ServerInfo)-->
+							<rect name="Link5" pos="0,-480" controller="ServerInfo">
+								<label name="Link5Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link5Title" />
+								<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+								<label name="ServerDescription" />
+								<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link5URL"/>
+							</rect>
+
+							<!--Do not remove or change the controller below (ServerInfo)-->
+							<rect name="Link6" pos="0,-580" controller="ServerInfo">
+								<label name="Link6Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link6Title" />
+								<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+								<label name="ServerDescription" />
+								<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link6URL"/>
+							</rect>
+						</rect>
+					</rect>
+				</rect>
+			</rect>
+		</window>
+
+	</append>
+</configs>

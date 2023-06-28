@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-NoLPU"/>
+	<DisplayName value="Simple UI No Location Pop Up"/>
+	<Version value="1.0.0"/>
+	<Description value="Removes the giant pop up message panel that appears top center when entering a location."/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

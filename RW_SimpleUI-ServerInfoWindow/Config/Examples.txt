@@ -1,0 +1,161 @@
+This is merely here to provide a few formatting examples for the Localization.txt as well as how to do a couple things in the window.xml file.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+For starters it's always best to make sure your text is in qoutes in the localization otherwise formatting can get weird and you can't use things like commas.
+
+This is only a small sample of what can be done in the localization file but should hopefully be enough to help people get started.
+
+EVERYTHING MENTIONED BELOW IS DONE IN THE Localization.txt FILE OF THIS MOD
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+\n = new line
+To have text be on a new line you would just use \n
+
+EXAMPLE:
+xuiRW_Tab1Contents," 1.) Server Rule 1 \n 2.) Server Rule 2"
+
+In Game Appearance:
+ 1.) Server Rule 1
+ 2.) Server Rule 2
+
+By default in the mod I added an extra blank line between for more spacing
+
+EXAMPLE:
+xuiRW_Tab1Contents," 1.) Server Rule 1 \n\n 2.) Server Rule 2"
+
+In Game Appearance:
+ 1.) Server Rule 1
+
+ 2.) Server Rule 2
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+[B]Bold Text[/B]
+Put text in the above to make it bold.
+
+EXAMPLE:
+xuiRW_Tab1Contents," 1.) [B]Server Rule 1[/B] \n 2.) [B]Server Rule 2[/B]"
+
+In Game Appearance
+ 1.) Server Rule 1  <--The "Server Rule 1" part would show as bold text
+ 2.) Server Rule 2 <--The "Server Rule 2" part would show as bold text
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+[U]Underlined Text[/U]
+Put text in the above to make it underlined.
+
+EXAMPLE:
+xuiRW_Tab1Contents," 1.) [U]Server Rule 1[/U] \n 2.) [U]Server Rule 2[/U]"
+
+In Game Appearance
+ 1.) Server Rule 1  <--The "Server Rule 1" part would show as underlined text
+ 2.) Server Rule 2 <--The "Server Rule 2" part would show as underlined text
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+[00ff00]Colored Text[-]
+To have text colored you can use hex color codes
+
+EXAMPLE:
+xuiRW_Tab1Contents," 1.) [ff0000]Server Rule 1[-] \n 2.) [00ff00]Server Rule 2[-]"
+
+In Game Appearance
+ 1.) Server Rule 1  <--The "Server Rule 1" part would show as red text
+ 2.) Server Rule 2 <--The "Server Rule 2" part would show as green text
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+[B][U][00ff00]Combined Text[-][/B][/U]
+You can combine any of the above examples as well
+
+EXAMPLE:
+xuiRW_Tab1Contents," 1.) [B][U][ff0000]Server Rule 1[-][/B][/U] \n 2.) [B][U][00ff00]Server Rule 2[-][/B][/U]"
+
+In Game Appearance
+ 1.) Server Rule 1  <--The "Server Rule 1" part would show as bold underlined red text
+ 2.) Server Rule 2 <--The "Server Rule 2" part would show as bold underlined green text
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Now on to the xml stuff in the windows.xml file. Some trial and error may be required for some of the below. Don't get discouraged it really is much easier than it appears.
+
+EVERYTHING MENTIONED BELOW IS DONE IN THE windows.xml FILE OF THIS MOD
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+By default all the titles for each tabs content are centered as well as the text content in tab 4.
+
+BEFORE EXAMPLE:
+<label name="Tab1ContentTitle" depth="3" height="58" justify="center" font_size="32" text_key="xuiRW_Tab1ContentTitle" />
+
+To stop the above Tab Content Title from being centered in the window just remove the justify="center" portion from above.
+
+AFTER EXAMPLE:
+<label name="Tab1ContentTitle" depth="3" height="58" font_size="32" text_key="xuiRW_Tab1ContentTitle" />
+
+The above Tab Content Title would then go back to starting from the left side of the window instead of being centered.
+
+Server Info Header, and any Tab Content Titles or Tab Contents are safe to do this with. You can also do the reverse to any of them by adding the justify="center" if there's text you'd rather have centered.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+You can change any of the font sizes in the windows.xml file by searching for font_size and adjusting the value you find.
+
+BEFORE EXAMPLE:
+<label name="Tab1ContentTitle" depth="3" height="58" justify="center" font_size="32" text_key="xuiRW_Tab1ContentTitle" />
+
+To make the font size bigger in the above example just change the font_size="32" to something bigger.
+
+AFTER EXAMPLE:
+<label name="Tab1ContentTitle" depth="3" height="58" justify="center" font_size="36" text_key="xuiRW_Tab1ContentTitle" />
+
+This make take some trial and error for some entries as the height or position(pos) may need altered as well.
+
+Server Info Header, and any Tab Content Titles or Tab Contents should be safe to do this with.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+How to remove a link from the xml in the links tab
+
+Links are not handled the same as the other panels, use caution when editing these in the xml.
+
+When removing links make sure to start from the bottom up and remove the entire link rect for that link.
+
+BEFORE EXAMPLE:
+<!--Do not remove or change the controller below (ServerInfo)-->
+<rect name="Link5" pos="0,-480" controller="ServerInfo">
+	<label name="Link5Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link5Title" />
+	<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+	<label name="ServerDescription" />
+	<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link5URL"/>
+</rect>
+
+<!--Do not remove or change the controller below (ServerInfo)-->
+<rect name="Link6" pos="0,-580" controller="ServerInfo">
+	<label name="Link6Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link6Title" />
+	<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+	<label name="ServerDescription" />
+	<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link6URL"/>
+</rect>
+
+The above before example is how it would look before removing Link 6
+
+AFTER EXAMPLE:
+<!--Do not remove or change the controller below (ServerInfo)-->
+<rect name="Link5" pos="0,-480" controller="ServerInfo">
+	<label name="Link5Title" depth="3" justify="center" font_size="26" text_key="xuiRW_Link5Title" />
+	<!--Do not remove or change either label name below(ServerDescription)(ServerWebsiteURL)-->
+	<label name="ServerDescription" />
+	<label depth="3" pos="0,-30" height="22" name="ServerWebsiteURL" justify="center" style="press" font_size="22" upper_case="false" text_key="xuiRW_Link5URL"/>
+</rect>
+
+The above after example is how it would look after removing Link 6
+
+Do not worry about that do not remove or replace comment, that only applies if you want to have a clickable link. So when removing links you can remove that as well ;)
+
+You can add more links in as well by copying the entire rect a link is in and pasting it down below the last link. However this may require adjusting the postition(pos) of your links in the xml. This can take a little to get right but shouldn't be too hard.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Hopefully this helps with some of the formatting, GLHF :D

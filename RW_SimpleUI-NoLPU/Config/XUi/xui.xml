@@ -1,0 +1,6 @@
+<configs>
+
+	<!-- remove the pop up from it's window group so it no longers gets called when entering a location. -->
+	<remove xpath="/xui/ruleset/window_group[@name='compass']/window[@name='windowEntering']"/>
+
+</configs>

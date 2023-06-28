@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-NoPOSPI"/>
+	<DisplayName value="Simple UI No POSPI"/>
+	<Version value="1.0.0"/>
+	<Description value="Removes the on screen player icon that shows when within 20m of party members"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

@@ -1,0 +1,12 @@
+<configs>
+
+	<!-- Add the server info window group with the new server info window in it. -->
+	<append xpath="/xui/ruleset">
+
+		<window_group name="serverinfowindow">
+			<window name="RevsWW_ServerInfo" />
+		</window_group>
+
+	</append>
+
+</configs>

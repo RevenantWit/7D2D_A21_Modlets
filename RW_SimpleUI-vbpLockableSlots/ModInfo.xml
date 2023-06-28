@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-vbpLockableSlots"/>
+	<DisplayName value="Simple UI VBP Lockable Slots"/>
+	<Version value="1.0.0"/>
+	<Description value="Adds lockable slots to the vanilla backpack"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

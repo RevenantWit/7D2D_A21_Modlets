@@ -1,0 +1,59 @@
+Key,english
+
+
+xuiRW_ServerInfoHeader,"Server Information"
+
+
+xuiRW_Tab1Label,"Rules"
+
+xuiRW_Tab1ContentTitle,"Server Rules Title"
+
+xuiRW_Tab1Contents," 1.) Server Rule 1 \n\n 2.) Server Rule 2 \n\n 3.) Server Rule 3 \n\n 4.) Server Rule 4 \n\n 5.) Server Rule 5 \n\n 6.) Server Rule 6 \n\n 7.) Server Rule 7 \n\n 8.) Server Rule 8 \n\n 9.) Server Rule 9 \n\n 10.) Server Rule 10 "
+
+
+
+xuiRW_Tab2Label,"News"
+
+xuiRW_Tab2ContentTitle,"Server News Title"
+
+xuiRW_Tab2Contents,"Exciting Server News"
+
+
+
+xuiRW_Tab3Label,"Commands"
+
+xuiRW_Tab3ContentTitle,"Server Commands Title"
+
+xuiRW_Tab3Contents," 1.) Command 1 \n\n 2.) Command 2 \n\n 3.) Command 3 \n\n 4.) Command 4 \n\n 5.) Command 5 \n\n 6.) Command 6 \n\n 7.) Command 7 \n\n 8.) Command 8 \n\n 9.) Command 9 \n\n 10.) Command 10 "
+
+
+
+xuiRW_Tab4Label,"Support"
+
+xuiRW_Tab4ContentTitle,"Server Support Title"
+
+xuiRW_Tab4Contents," Q:  Why this thing not work? \n\n A:  Did you try turning it off and then back on again? \n\n\n\n\n Join the discord for further support."
+
+
+
+xuiRW_Tab5Label,"Links"
+
+xuiRW_Tab5ContentTitle,"Server Links Title"
+
+xuiRW_Link1Title,"7 Day to Die Forums"
+xuiRW_Link1URL,"https://community.7daystodie.com/"
+
+xuiRW_Link2Title,"Simple UI"
+xuiRW_Link2URL,"https://community.7daystodie.com/topic/32081-simple-ui-free-use-ui-modlets/"
+
+xuiRW_Link3Title,"Discord"
+xuiRW_Link3URL,"Discord Link"
+
+xuiRW_Link4Title,"Link 4 Title"
+xuiRW_Link4URL,"Link 4"
+
+xuiRW_Link5Title,"Link 5 Title"
+xuiRW_Link5URL,"Link 5"
+
+xuiRW_Link6Title,"Link 6 Title"
+xuiRW_Link6URL,"Link 6"
