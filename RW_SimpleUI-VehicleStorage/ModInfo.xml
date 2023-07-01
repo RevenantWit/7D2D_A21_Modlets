@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-VehicleStorage"/>
+	<DisplayName value="Simple UI Vehicle Storage"/>
+	<Version value="2.0.0"/>
+	<Description value="Bicycle 20 slots, Minibike 40 slots, Motorcycle 50 slots, Truck 90 slots, Gyrocopter 60 slots"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

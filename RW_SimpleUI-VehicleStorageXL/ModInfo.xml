@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SimpleUI-VehicleStorageXL"/>
+	<DisplayName value="Simple UI Vehicle Storage XL"/>
+	<Version value="2.0.0"/>
+	<Description value="Increases all vehicle storages to 90 slots"/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>
