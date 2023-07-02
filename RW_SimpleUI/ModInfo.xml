@@ -2,7 +2,7 @@
 <xml>
 	<Name value="RW_SimpleUI"/>
 	<DisplayName value="Simple UI Left HUD"/>
-	<Version value="2.1.0"/>
+	<Version value="2.2.0"/>
 	<Description value="Replaces Left HUD with one that has tabs for changing some elements in live game"/>
 	<Author value="RevenantWit"/>
 	<Website value=""/>

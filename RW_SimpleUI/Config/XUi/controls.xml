@@ -1,0 +1,91 @@
+<configs>
+
+<append xpath="/controls">
+
+	<sui_hud_stealthBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+			<sprite depth="1" name="border" color="0,0,0,150" height="${height}" type="sliced"/>
+			<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+			<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1"/>
+			<filledsprite depth="4" name="BarContent" color="${bar_content_color}" type="filled" fill="0"/>
+			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="6" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" pivot="left" text="${text}" width="${text_width}" height="${text_height}"/>
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" fillcenter="false" type="filled" fill="1"/>
+			<filledsprite depth="3" name="background" color="0,0,0,255" width="${width-1}" fillcenter="false" type="filled" fill="1"/>
+		</rect>
+	</sui_hud_stealthBar>
+
+	<sui_hud_vanilla_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+			<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+			<filledsprite depth="3" name="background" color="110,110,110,128" width="${width-2}" type="filled" fill="{statmodifiedmax}"/>
+			<filledsprite depth="5" name="BarContent" color="${bar_content_color}" width="${width-2}" type="filled" fill="0"/>
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" pivot="left" text="${text}" width="${text_width}" height="${text_height}"/>
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+			<filledsprite depth="3" name="background" color="0,0,0,255" width="${width-1}" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+		</rect>
+	</sui_hud_vanilla_statBar>
+
+	<sui_hud_overfillfix_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+			<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+			<filledsprite depth="3" name="background" color="110,110,110,128" width="${width-2}" type="filled" fill="{statmodifiedmax}"/>
+			<filledsprite depth="5" name="BarContent" color="${bar_content_color}" width="${width-2}" type="filled" fill="0"/>
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" pivot="topleft" text="{statcurrent}%" width="${text_width}" height="${text_height}" visible="{# statcurrent != '100' and statcurrent != '99'}" />
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" pivot="topleft" text="100%" width="${text_width}" height="${text_height}" visible="{# statcurrent = '100' or statcurrent = '99'}" />
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+			<filledsprite depth="3" name="background" color="0,0,0,255" width="${width-1}" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+		</rect>
+	</sui_hud_overfillfix_statBar>
+
+	<sui_hud_vanilla_BuffPopout>
+		<rect side="left" pos="${pos}" controller="BuffPopoutList" pivot="BottomLeft" >
+			<panel width="${width}" height="${height}" name="item" visible="false" pivot="right" disableautobackground="true" style="press" sound="[recipe_click]" on_hover="true" >
+				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="${height}" width="${width-6}" pivot="center" flip="Horizontally" color="[transparent]" />
+				<sprite depth="4" name="Icon" size="${icon_size}" pos="${icon_pos}" pivot="center" color="[transparent]"/>
+				<label depth="6" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" width="${text_width}" height="${text_height}" pivot="left"/>
+			</panel>
+		</rect>
+	</sui_hud_vanilla_BuffPopout>
+
+	<sui_hud_detailedBuff>
+		<panel width="${width}" height="${height}" pos="${pos}" controller="ActiveBuffEntry" disableautobackground="true" >	
+			<sprite depth="0" name="background" color="[transparent]" />
+			<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" size="${icon_size}" pos="${icon_pos}" foregroundlayer="true" />
+			<label depth="2" pos="${text_pos}" width="${text_width}" height="${text_height}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="${text_size}" color="${text_color}" pivot="topleft" effect="outline" />
+		</panel>
+	</sui_hud_detailedBuff>
+
+	<sui_hud_detailedBuffList>
+		<rect name="BuffList" pos="${pos}" controller="ActiveBuffList">
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,0" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,50" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,100" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,150" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,200" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,250" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,300" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,350" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,400" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+
+			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,450" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+		</rect>
+	</sui_hud_detailedBuffList>
+
+</append>
+</configs>
