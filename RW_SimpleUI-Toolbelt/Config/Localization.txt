@@ -1,6 +1,10 @@
 Key,english
 
-xuiRWToolbeltTab1,"TB\n1"
-xuiRWToolbeltTab2,"TB\n2"
-xuiRWToolbeltTab3,"TB\n3"
-xuiRWToolbeltTab4,"TB\n4"
+suiToolbeltTab1,"Default"
+suiToolbeltTab2,"Alternate"
+suiToolbeltTab3,"HUD"
+suiToolbeltTab4,"Mini HUD"
+
+suiToolbeltXPbar,"LEVEL:"
+
+suiToolbeltTempText,"World Temp:"
