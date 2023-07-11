@@ -1,0 +1,36 @@
+<configs>
+
+<!-- Add the new material created in the materials xml and a weight to the master skill magazine so all skill magazines inherit it.-->
+<append xpath="//item[@name='masterSkillMagazine']" >
+	<property name="Material" value="MresourceRWSkillPapers" />
+	<property name="Weight" value="2" />
+</append>
+
+<!--Add the Resources group to the master skill magazine so all skill magazines show under that tab in workbench.-->
+<!--This will also make magazines show under the resource tab at the traders.-->
+<!--If you do not want this feature you can remove the one line below-->
+<!--If you do remove this line you will then have to search for the magazine recipes at the workbbench-->
+<csv xpath="/items/item[@name='masterSkillMagazine']/property[@name='Group']/@value" delim="," op="add" >Resources</csv>
+
+<!--Add the new scrap item. This is what we get back when scrapping a skill magazine-->
+<!--Material is the new material created in the materials xml-->
+<append xpath="/items">
+
+<item name="resourceRWSkillPapers">
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="CustomIconTint" value="003366"/>
+	<property name="Tags" value="junk"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceRWSkillPapers"/>
+	<property name="Weight" value="1" />
+	<property name="Stacknumber" value="500"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value="3.0"/>
+</item>
+
+</append>
+
+</configs>

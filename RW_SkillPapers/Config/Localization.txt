@@ -1,0 +1,4 @@
+Key,english
+
+resourceRWSkillPapers,"Skill Papers"
+resourceRWSkillPapersDesc,"Skill papers can be used at a workbench to bind together a new skill magazine of your choosing."

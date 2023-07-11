@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_ScrapSkillPapers"/>
+	<DisplayName value="Scrap Skill Papers"/>
+	<Version value="1.0.0"/>
+	<Description value="Scrap skill magazines into skill papers that can be used at the workbench to make a skill magazine of your choosing."/>
+	<Author value="RevenantWit"/>
+	<Website value=""/>
+</xml>

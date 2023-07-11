@@ -1,0 +1,152 @@
+<configs>
+
+<!--Add the new scrap recipe for the new material added.-->
+<!--Recipe name is the forge category listed in the materials xml and is the new resource item created in the items xml.-->
+<insertafter xpath="//recipe[@name='resourceBone']">
+<recipe name="resourceRWSkillPapers" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+</insertafter>
+
+<!--Add the skill magazines as recipes so they can be crafted-->
+<append xpath="/recipes">
+
+<recipe name="harvestingToolsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="repairToolsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="salvageToolsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="knucklesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="bladesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="clubsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="sledgehammersSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="spearsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="bowsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="handgunsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="shotgunsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="riflesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="machineGunsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="explosivesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="roboticsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="armorSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="medicalSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="foodSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="seedSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="electricianSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="trapsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="workstationSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="vehiclesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+</append>
+
+</configs>
