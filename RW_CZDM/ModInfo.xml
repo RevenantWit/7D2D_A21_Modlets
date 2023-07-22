@@ -3,7 +3,7 @@
 	<Name value="RW_CZDM"/>
 	<DisplayName value="Customizable Zombie Damage Multiplier"/>
 	<Version value="1.0.1"/>
-	<Description value="Sets a separate positive or negative body and head damage multiplier for various zombie groups."/>
+	<Description value="Sets a separate positive or negative body and head damage multiplier for various zombie groups. Easy to edit xml with instructions. Default is headshots only."/>
 	<Author value="RevenantWit"/>
 	<Website value=""/>
 </xml>
