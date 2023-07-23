@@ -1,0 +1,6 @@
+Key,english
+
+suiLeftHUDTab1,"Default"
+suiLeftHUDTab2,"Classic"
+suiLeftHUDTab3,"Vertical"
+suiLeftHUDTab4,"Radial"

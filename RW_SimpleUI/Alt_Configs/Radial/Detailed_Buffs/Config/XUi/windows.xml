@@ -46,41 +46,66 @@
 
 		<rect name="tabsContents" ><!--Do not remove or change this rect name-->
 
-			<!--Classic Simple UI Layout 1/2-->
-			<rect name="classicTab1" >
-				<rect name="leftHUDwindow" pos="0,13" side="right">
+			<!--Radial Layout 1/2-->
+			<rect name="radialTab1" >
+				<rect name="leftHUDwindow" pos="0,18" side="right">
 
-					<!--Stealth Bar-->
-					<sui_hud_statBar width="171" height="46" pos="0,49" stat_type="Stealth" globalopacitymod="0.95" barBackground_fill="1" barContent_color="{stealthcolor}" sprite="{staticon|once}" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" text="{statcurrent}" text_pos="40,-11" text_color="[white]" text_width="125" text_height="28" text_justify="center" />
+					<!--Radial Stealth Bar-->
+					<sui_hud_radial_statBar width="50" height="50" pos="175,-46" stat_type="Stealth" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="1" barContent_color="{stealthcolor}" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="26" topLayer_width="26" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="24,-24" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
 
-					<!--Stamina Bar-->
-					<sui_hud_statBar width="171" height="46" pos="0,0" stat_type="Stamina" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" text="{statcurrentwithmax}" text_pos="40,-11" text_color="[white]" text_width="125" text_height="28" text_justify="center" />
+					<!--Radial Stamina Bar-->
+					<sui_hud_radial_statBar width="75" height="75" pos="108,-73" stat_type="Stamina" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
 
-					<!--Health Bar-->
-					<sui_hud_statBar width="171" height="46" pos="0,-49" stat_type="Health" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" text="{statcurrentwithmax}" text_pos="40,-11" text_color="[white]" text_width="125" text_height="28" text_justify="center" />
+					<!--Radial Health Bar-->
+					<sui_hud_radial_statBar width="75" height="75" pos="-1,-73" stat_type="Health" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
 
-					<!--Food Bar-->
-					<sui_hud_overfillfix_statBar width="84" height="46" pos="0,-98" stat_type="Food" globalopacitymod="1.2" barContent_color="0,255,54,128" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="17,-24" text_pos="34,-14" text_color="[white]" text_width="40" text_height="24" text_justify="center" />
+					<!--Radial Food Bar-->
+					<sui_hud_simple_radial_statBar width="75" height="75" pos="108,6" stat_type="Food" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="0,255,54,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
 
-					<!--Water Bar-->
-					<sui_hud_overfillfix_statBar width="85" height="46" pos="86,-98" stat_type="Water" globalopacitymod="1.2" barContent_color="64,164,223,150" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="16,-23" text_pos="34,-14" text_color="[white]" text_width="40" text_height="24" text_justify="center" />
+					<!--Radial Water Bar-->
+					<sui_hud_simple_radial_statBar width="75" height="75" pos="-1,6" stat_type="Water" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="64,164,223,150" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+					<!--Round Player Core Temp-->
+					<rect name="coreTemp" controller="MapStats">
+						<sui_hud_simpleNoFill_round width="50" height="50" pos="66,-46" border_color="[white]" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" sprite="ui_game_symbol_player" icon_size="20,20" icon_pos="15,-5" icon_color="[white]" text="[DECEA3]{playercoretemp}[-]" text_pos="9,-28" text_width="34" text_height="12" text_color="[white]" text_justify="center" tooltip="{playercoretemptitle}: {playercoretemp}" on_hover="true" />
+					</rect>
 				</rect>
 
-				<!--Simple Buffs 5x3 when stealth is not visible-->
-				<rect name="buffsSNV" controller="HUDStatBar" stat_type="Stealth" visible="{# !statvisible}">
-
-					<sui_hud_buffList_5row3colUp pos="0,62" width="55" height="46" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="16,-20" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="15,-4" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
-				</rect>
-
-				<!--Simple Buffs 5x3 when stealth is visible-->
-				<rect name="buffsSV" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
-
-					<sui_hud_buffList_5row3colUp pos="0,112" width="55" height="46" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="16,-20" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="15,-4" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
-				</rect>
+				<!--Round Detailed Buffs 10x-->
+				<sui_hud_buffList_10rowUp_round pos="0,66" width="34" height="34" panel_offset="3" border_color="{buffcolor}" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" icon_size="20,20" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="42,-5" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
 			</rect>
 
-			<!--Classic Simple UI Layout 2/2-->
-			<rect name="classicTab2" >
+			<!--Radial Layout 2/2-->
+			<rect name="radialTab2" >
+				<rect name="leftHUDwindow" pos="0,18" side="right">
+
+					<!--Radial Stealth Bar-->
+					<sui_hud_radial_statBar width="50" height="50" pos="175,-46" stat_type="Stealth" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="1" barContent_color="{stealthcolor}" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="26" topLayer_width="26" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="24,-24" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+					<!--Radial Stamina Bar-->
+					<sui_hud_radial_statBar width="75" height="75" pos="108,-73" stat_type="Stamina" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+					<!--Radial Health Bar-->
+					<sui_hud_radial_statBar width="75" height="75" pos="-1,-73" stat_type="Health" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+					<!--Radial Food Bar-->
+					<sui_hud_simple_radial_statBar width="75" height="75" pos="108,6" stat_type="Food" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="0,255,54,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+					<!--Radial Water Bar-->
+					<sui_hud_simple_radial_statBar width="75" height="75" pos="-1,6" stat_type="Water" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="64,164,223,150" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+					<!--Round Player Core Temp-->
+					<rect name="coreTemp" controller="MapStats">
+						<sui_hud_simpleNoFill_round width="50" height="50" pos="66,-46" border_color="[white]" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" sprite="ui_game_symbol_player" icon_size="20,20" icon_pos="15,-5" icon_color="[white]" text="[DECEA3]{playercoretemp}[-]" text_pos="9,-28" text_width="34" text_height="12" text_color="[white]" text_justify="center" tooltip="{playercoretemptitle}: {playercoretemp}" on_hover="true" />
+					</rect>
+				</rect>
+
+				<!--Simple Round Buffs 3x5-->
+				<sui_hud_buffList_3row5colUp_round pos="0,66" width="34" height="34" panel_offset="3" border_color="{buffcolor}" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" icon_size="20,20" icon_pos="7,-7" icon_color="{buffcolor}" text="" text_pos="0,0" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
+			</rect>
+
+			<!--Classic Simple UI Layout 1/2-->
+			<rect name="classicTab1" >
 				<rect name="leftHUDwindow" pos="0,13" side="right">
 
 					<!--Stealth Bar-->
@@ -112,32 +137,41 @@
 				</rect>
 			</rect>
 
-			<!--Vertical Layout 1/2-->
-			<rect name="verticalTab1" >
-				<rect name="leftHUDwindow" pos="0,18" side="right">
+			<!--Classic Simple UI Layout 2/2-->
+			<rect name="classicTab2" >
+				<rect name="leftHUDwindow" pos="0,13" side="right">
 
-					<!--Vertical Stealth Bar-->
-					<sui_hud_vertical_statBar width="42" height="167" pos="172,0" stat_type="Stealth" globalopacitymod="0.95" barBackground_fill="1" barContent_color="{stealthcolor}" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+					<!--Stealth Bar-->
+					<sui_hud_statBar width="171" height="46" pos="0,49" stat_type="Stealth" globalopacitymod="0.95" barBackground_fill="1" barContent_color="{stealthcolor}" sprite="{staticon|once}" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" text="{statcurrent}" text_pos="40,-11" text_color="[white]" text_width="125" text_height="28" text_justify="center" />
 
-					<!--Vertical Stamina Bar-->
-					<sui_hud_vertical_statBar width="42" height="150" pos="0,0" stat_type="Stamina" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+					<!--Stamina Bar-->
+					<sui_hud_statBar width="171" height="46" pos="0,0" stat_type="Stamina" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" text="{statcurrentwithmax}" text_pos="40,-11" text_color="[white]" text_width="125" text_height="28" text_justify="center" />
 
-					<!--Vertical Health Bar-->
-					<sui_hud_vertical_statBar width="42" height="150" pos="43,0" stat_type="Health" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+					<!--Health Bar-->
+					<sui_hud_statBar width="171" height="46" pos="0,-49" stat_type="Health" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" text="{statcurrentwithmax}" text_pos="40,-11" text_color="[white]" text_width="125" text_height="28" text_justify="center" />
 
-					<!--Vertical Food Bar-->
-					<sui_hud_overfillfix_statBar width="42" height="150" pos="86,0" stat_type="Food" globalopacitymod="1.2" barContent_color="0,255,54,128" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+					<!--Food Bar-->
+					<sui_hud_overfillfix_statBar width="84" height="46" pos="0,-98" stat_type="Food" globalopacitymod="1.2" barContent_color="0,255,54,128" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="17,-24" text_pos="34,-14" text_color="[white]" text_width="40" text_height="24" text_justify="center" />
 
-					<!--Vertical Water Bar-->
-					<sui_hud_overfillfix_statBar width="42" height="150" pos="129,0" stat_type="Water" globalopacitymod="1.2" barContent_color="64,164,223,150" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+					<!--Water Bar-->
+					<sui_hud_overfillfix_statBar width="85" height="46" pos="86,-98" stat_type="Water" globalopacitymod="1.2" barContent_color="64,164,223,150" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="16,-23" text_pos="34,-14" text_color="[white]" text_width="40" text_height="24" text_justify="center" />
 				</rect>
 
-				<!--Simple Buffs 3x5-->
-				<sui_hud_buffList_3row5colUp pos="0,83" width="32" height="62" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="5,-33" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="3,-12" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
+				<!--Simple Buffs 5x3 when stealth is not visible-->
+				<rect name="buffsSNV" controller="HUDStatBar" stat_type="Stealth" visible="{# !statvisible}">
+
+					<sui_hud_buffList_5row3colUp pos="0,62" width="55" height="46" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="16,-20" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="15,-4" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
+				</rect>
+
+				<!--Simple Buffs 5x3 when stealth is visible-->
+				<rect name="buffsSV" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+
+					<sui_hud_buffList_5row3colUp pos="0,112" width="55" height="46" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="16,-20" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="15,-4" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
+				</rect>
 			</rect>
 
-			<!--Vertical Layout 2/2-->
-			<rect name="verticalTab2" >
+			<!--Vertical Layout 1/2-->
+			<rect name="verticalTab1" >
 				<rect name="leftHUDwindow" pos="0,18" side="right">
 
 					<!--Vertical Stealth Bar-->
@@ -160,76 +194,42 @@
 				<sui_hud_buffList_10rowUp pos="0,63" width="42" height="42" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="28,28" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="49,-7" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
 			</rect>
 
-			<!--Radial Layout 1/2-->
-			<rect name="radialTab1" >
+			<!--Vertical Layout 2/2-->
+			<rect name="verticalTab2" >
 				<rect name="leftHUDwindow" pos="0,18" side="right">
 
-					<!--Radial Stealth Bar-->
-					<sui_hud_radial_statBar width="50" height="50" pos="175,-46" stat_type="Stealth" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="1" barContent_color="{stealthcolor}" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="26" topLayer_width="26" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="24,-24" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+					<!--Vertical Stealth Bar-->
+					<sui_hud_vertical_statBar width="42" height="167" pos="172,0" stat_type="Stealth" globalopacitymod="0.95" barBackground_fill="1" barContent_color="{stealthcolor}" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
 
-					<!--Radial Stamina Bar-->
-					<sui_hud_radial_statBar width="75" height="75" pos="108,-73" stat_type="Stamina" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+					<!--Vertical Stamina Bar-->
+					<sui_hud_vertical_statBar width="42" height="150" pos="0,0" stat_type="Stamina" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
 
-					<!--Radial Health Bar-->
-					<sui_hud_radial_statBar width="75" height="75" pos="-1,-73" stat_type="Health" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+					<!--Vertical Health Bar-->
+					<sui_hud_vertical_statBar width="42" height="150" pos="43,0" stat_type="Health" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
 
-					<!--Radial Food Bar-->
-					<sui_hud_simple_radial_statBar width="75" height="75" pos="108,6" stat_type="Food" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="0,255,54,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+					<!--Vertical Food Bar-->
+					<sui_hud_overfillfix_statBar width="42" height="150" pos="86,0" stat_type="Food" globalopacitymod="1.2" barContent_color="0,255,54,128" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
 
-					<!--Radial Water Bar-->
-					<sui_hud_simple_radial_statBar width="75" height="75" pos="-1,6" stat_type="Water" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="64,164,223,150" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
-
-					<!--Round Player Core Temp-->
-					<rect name="coreTemp" controller="MapStats">
-						<sui_hud_simpleNoFill_round width="50" height="50" pos="66,-46" border_color="[white]" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" sprite="ui_game_symbol_player" icon_size="20,20" icon_pos="15,-5" icon_color="[white]" text="[DECEA3]{playercoretemp}[-]" text_pos="9,-28" text_width="34" text_height="12" text_color="[white]" text_justify="center" tooltip="{playercoretemptitle}: {playercoretemp}" on_hover="true" />
-					</rect>
+					<!--Vertical Water Bar-->
+					<sui_hud_overfillfix_statBar width="42" height="150" pos="129,0" stat_type="Water" globalopacitymod="1.2" barContent_color="64,164,223,150" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
 				</rect>
 
-				<!--Simple Round Buffs 3x5-->
-				<sui_hud_buffList_3row5colUp_round pos="0,66" width="34" height="34" panel_offset="3" border_color="{buffcolor}" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" icon_size="20,20" icon_pos="7,-7" icon_color="{buffcolor}" text="" text_pos="0,0" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
-			</rect>
-
-			<!--Radial Layout 2/2-->
-			<rect name="radialTab2" >
-				<rect name="leftHUDwindow" pos="0,18" side="right">
-
-					<!--Radial Stealth Bar-->
-					<sui_hud_radial_statBar width="50" height="50" pos="175,-46" stat_type="Stealth" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="1" barContent_color="{stealthcolor}" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="26" topLayer_width="26" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="24,-24" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
-
-					<!--Radial Stamina Bar-->
-					<sui_hud_radial_statBar width="75" height="75" pos="108,-73" stat_type="Stamina" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
-
-					<!--Radial Health Bar-->
-					<sui_hud_radial_statBar width="75" height="75" pos="-1,-73" stat_type="Health" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
-
-					<!--Radial Food Bar-->
-					<sui_hud_simple_radial_statBar width="75" height="75" pos="108,6" stat_type="Food" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="0,255,54,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
-
-					<!--Radial Water Bar-->
-					<sui_hud_simple_radial_statBar width="75" height="75" pos="-1,6" stat_type="Water" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="64,164,223,150" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
-
-					<!--Round Player Core Temp-->
-					<rect name="coreTemp" controller="MapStats">
-						<sui_hud_simpleNoFill_round width="50" height="50" pos="66,-46" border_color="[white]" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" sprite="ui_game_symbol_player" icon_size="20,20" icon_pos="15,-5" icon_color="[white]" text="[DECEA3]{playercoretemp}[-]" text_pos="9,-28" text_width="34" text_height="12" text_color="[white]" text_justify="center" tooltip="{playercoretemptitle}: {playercoretemp}" on_hover="true" />
-					</rect>
-				</rect>
-
-				<!--Round Detailed Buffs 10x-->
-				<sui_hud_buffList_10rowUp_round pos="0,66" width="34" height="34" panel_offset="3" border_color="{buffcolor}" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" icon_size="20,20" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="42,-5" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
+				<!--Simple Buffs 3x5-->
+				<sui_hud_buffList_3row5colUp pos="0,83" width="32" height="62" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="5,-33" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="3,-12" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
 			</rect>
 
 			<!--None Layout 1/2-->
 			<rect name="noneTab1" >
 
-				<!--Simple Buffs 5x3-->
-				<sui_hud_buffList_5row3colUp pos="0,-84" width="55" height="46" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="16,-20" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="15,-4" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
-			</rect>
-
-			<!--None layout 2/2-->
-			<rect name="noneTab2" >
-
 				<!--Detailed Buffs 10x-->
 				<sui_hud_buffList_10rowUp pos="0,-88" width="42" height="42" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="28,28" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="49,-10" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
+			</rect>
+
+			<!--None Layout 2/2-->
+			<rect name="noneTab2" >
+
+				<!--Simple Buffs 5x3-->
+				<sui_hud_buffList_5row3colUp pos="0,-84" width="55" height="46" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="16,-20" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="15,-4" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
 			</rect>
 
 		</rect>

@@ -1,6 +1,6 @@
 Key,english
 
 suiLeftHUDTab1,"Default"
-suiLeftHUDTab2,"Vertical"
-suiLeftHUDTab3,"Radial"
+suiLeftHUDTab2,"Classic"
+suiLeftHUDTab3,"Vertical"
 suiLeftHUDTab4,"None"

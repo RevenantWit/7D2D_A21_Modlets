@@ -1,0 +1,14 @@
+
+To replace the default layout for a different one just copy the config folder from the default layout of your choosing in the Alt_Configs and paste and replace the one in the mods root folder.
+
+ONLY COPY AND REPLACE.
+DO NOT DELETE THE CONFIG FOLDER IN THE MODS ROOT FOLDER(RW_SimpleUI/Config).
+IT CONTAINS NEEDED FILES THAT THE ALT CONFIGS DO NOT HAVE.
+
+EXAMPLE:
+
+Copy the Config folder from the vertical detailed buffs layout found below
+RW_SimpleUI/Alt_Configs/Vertical/Detailed_Buffs/Config
+
+Then just paste and replace the mods config folder. Replace all files when asked. The folder listed below is the one you replace.
+RW_SimpleUI/Config

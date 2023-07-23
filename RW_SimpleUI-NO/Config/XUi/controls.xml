@@ -2,90 +2,258 @@
 
 <append xpath="/controls">
 
-	<sui_hud_stealthBar>
-		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
-			<sprite depth="1" name="border" color="0,0,0,150" height="${height}" type="sliced"/>
-			<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
-			<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1"/>
-			<filledsprite depth="4" name="BarContent" color="${bar_content_color}" type="filled" fill="0"/>
-			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
-			<label depth="6" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" pivot="left" text="${text}" width="${text_width}" height="${text_height}"/>
-			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" fillcenter="false" type="filled" fill="1"/>
-			<filledsprite depth="3" name="background" color="0,0,0,255" width="${width-1}" fillcenter="false" type="filled" fill="1"/>
-		</rect>
-	</sui_hud_stealthBar>
-
-	<sui_hud_vanilla_statBar>
+	<sui_hud_statBar>
 		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
-			<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
-			<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
-			<filledsprite depth="3" name="background" color="110,110,110,128" width="${width-2}" type="filled" fill="{statmodifiedmax}"/>
-			<filledsprite depth="5" name="BarContent" color="${bar_content_color}" width="${width-2}" type="filled" fill="0"/>
+			<sprite depth="1" name="border" color="0,0,0,150" type="sliced" globalopacitymod="${globalopacitymod}"/>
+			<sprite depth="2" name="background" color="0,0,0,140" type="sliced" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="3" name="background" color="110,110,110,128" width="${width-2}" type="filled" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="5" name="BarContent" color="${barContent_color}" width="${width-2}" type="filled" fill="0" globalopacitymod="${globalopacitymod}"/>
 			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
-			<label depth="7" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" pivot="left" text="${text}" width="${text_width}" height="${text_height}"/>
-			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
-			<filledsprite depth="3" name="background" color="0,0,0,255" width="${width-1}" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}"/>
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" fillcenter="false" type="filled" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="3" name="background" color="0,0,0,255" width="${width-1}" fillcenter="false" type="filled" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}"/>
 		</rect>
-	</sui_hud_vanilla_statBar>
+	</sui_hud_statBar>
+
+	<sui_hud_vertical_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="1" name="border" color="0,0,0,150" type="sliced" globalopacitymod="${globalopacitymod}"/>
+			<sprite depth="2" name="background" color="0,0,0,140" type="sliced" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="3" name="barBackground" color="110,110,110,128" height="${height-2}" type="filled" filldirection="vertical" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="5" name="BarContent" color="${barContent_color}" height="${height-2}" type="filled" filldirection="vertical" fill="0" globalopacitymod="${globalopacitymod}"/>
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}" />
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="8" name="background" color="0,0,0,255" height="${height}" fillcenter="false" type="filled" filldirection="vertical" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="3" name="background" color="0,0,0,255" height="${height-1}" fillcenter="false" type="filled" filldirection="vertical" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}"/>
+		</rect>
+	</sui_hud_vertical_statBar>
+
+	<sui_hud_radial_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="1" name="bottomLayer" color="${bottomLayer_color}" sprite="ui_game_filled_circle" globalopacity="${bottomLayer_globalopacity}" />
+			<sprite depth="2" name="bottomLayer" pos="1,-1" color="${topLayer_color}" height="${height-2}" width="${width-2}" sprite="ui_game_filled_circle" globalopacity="${topLayer_globalopacity}" />
+			<sprite depth="3" name="barBackground" pos="1,-1" color="${barBackground_color}" height="${height-2}" width="${width-2}" sprite="ui_game_filled_circle" type="filled" filldirection="radial360" fill="${barBackground_fill}" />
+			<sprite depth="4" name="BarContent" pos="1,-1" color="${barContent_color}" height="${height-2}" width="${width-2}" sprite="ui_game_filled_circle" type="filled" filldirection="radial360" fill="0" />
+			<sprite depth="5" name="topLayer" pos="${topLayer_pos}" color="${topLayer_color}" height="${topLayer_height}" width="${topLayer_width}" sprite="ui_game_filled_circle" globalopacity="${topLayer_globalopacity}" />
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}"/>
+		</rect>
+	</sui_hud_radial_statBar>
 
 	<sui_hud_overfillfix_statBar>
 		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
-			<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
-			<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
-			<filledsprite depth="3" name="background" color="110,110,110,128" width="${width-2}" type="filled" fill="{statmodifiedmax}"/>
-			<filledsprite depth="5" name="BarContent" color="${bar_content_color}" width="${width-2}" type="filled" fill="0"/>
+			<sprite depth="1" color="[black]" sprite="menu_empty2px" type="sliced" fillcenter="false" globalopacitymod="${globalopacitymod}"/>
+			<sprite depth="3" pos="1,-1" height="${height-2}" width="${width-2}" color="110,110,110,128" sprite="menu_empty2px" type="sliced" globalopacitymod="${globalopacitymod}"/>
+			<sprite depth="4" pos="1,-1" height="${height-2}" width="${width-2}" name="BarContent" color="${barContent_color}" type="filled" filldirection="${filldirection}" fill="0" globalopacitymod="${globalopacitymod}"  />
 			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
-			<label depth="7" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" pivot="topleft" text="{statcurrent}%" width="${text_width}" height="${text_height}" visible="{# statcurrent != '100' and statcurrent != '99'}" />
-			<label depth="7" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" pivot="topleft" text="100%" width="${text_width}" height="${text_height}" visible="{# statcurrent = '100' or statcurrent = '99'}" />
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="{statcurrent}%" width="${text_width}" height="${text_height}" visible="{# statcurrent != '100' and statcurrent != '99'}" />
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="100%" width="${text_width}" height="${text_height}" visible="{# statcurrent = '100' or statcurrent = '99'}" />
 			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
-			<filledsprite depth="3" name="background" color="0,0,0,255" width="${width-1}" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
 		</rect>
 	</sui_hud_overfillfix_statBar>
 
-	<sui_hud_vanilla_BuffPopout>
-		<rect side="left" pos="${pos}" controller="BuffPopoutList" pivot="BottomLeft" >
-			<panel width="${width}" height="${height}" name="item" visible="false" pivot="right" disableautobackground="true" style="press" sound="[recipe_click]" on_hover="true" >
-				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="${height}" width="${width-6}" pivot="center" flip="Horizontally" color="[transparent]" />
-				<sprite depth="4" name="Icon" size="${icon_size}" pos="${icon_pos}" pivot="center" color="[transparent]"/>
-				<label depth="6" name="TextContent" pos="${text_pos}" font_size="${text_size}" color="${text_color}" justify="center" width="${text_width}" height="${text_height}" pivot="left"/>
-			</panel>
+	<sui_hud_simple_radial_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="1" name="bottomLayer" color="${bottomLayer_color}" sprite="ui_game_filled_circle" globalopacity="${bottomLayer_globalopacity}" />
+			<sprite depth="2" name="bottomLayer" pos="1,-1" color="${topLayer_color}" height="${height-2}" width="${width-2}" sprite="ui_game_filled_circle" globalopacity="${topLayer_globalopacity}" />
+			<sprite depth="3" name="barBackground" pos="1,-1" color="${barBackground_color}" height="${height-2}" width="${width-2}" sprite="ui_game_filled_circle" type="sliced" />
+			<sprite depth="5" name="BarContent" pos="1,-1" color="${barContent_color}" height="${height-2}" width="${width-2}" sprite="ui_game_filled_circle" type="filled" filldirection="radial360" fill="0" />
+			<sprite depth="5" name="topLayer" pos="${topLayer_pos}" color="${topLayer_color}" height="${topLayer_height}" width="${topLayer_width}" sprite="ui_game_filled_circle" globalopacity="${topLayer_globalopacity}" />
+			<sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="8" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}"/>
 		</rect>
-	</sui_hud_vanilla_BuffPopout>
+	</sui_hud_simple_radial_statBar>
 
-	<sui_hud_detailedBuff>
+	<sui_hud_simpleNoFill_round>
+		<rect width="${width}" height="${height}" pos="${pos}">	
+			<sprite depth="1" name="border" color="${border_color}" sprite="ui_game_filled_circle" globalopacity="${border_globalopacity}" />
+			<sprite depth="2" name="background" pos="${background_pos}" width="${width-Round(border_thickness, 0)}" height="${height-Round(border_thickness, 0)}" color="${background_color}" sprite="ui_game_filled_circle" globalopacity="${background_globalopacity}" tooltip="${tooltip}" on_hover="${on_hover}" />
+			<sprite depth="3" name="Icon" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" foregroundlayer="true" />
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" height="${text_height}" font_size="32" color="${text_color}" text="${text}" justify="${text_justify}" effect="outline" />
+		</rect>
+	</sui_hud_simpleNoFill_round>
+
+	<sui_hud_buff>
 		<panel width="${width}" height="${height}" pos="${pos}" controller="ActiveBuffEntry" disableautobackground="true" >	
-			<sprite depth="0" name="background" color="[transparent]" />
-			<sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" size="${icon_size}" pos="${icon_pos}" foregroundlayer="true" />
-			<label depth="2" pos="${text_pos}" width="${text_width}" height="${text_height}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="${text_size}" color="${text_color}" pivot="topleft" effect="outline" />
+			<sprite depth="1" name="border" color="${border_color}" type="sliced" fillcenter="false" visible="{# bufficon != ''}" />
+			<sprite depth="2" name="background" color="${background_color}" type="sliced" visible="{# bufficon != ''}" />
+			<sprite depth="3" name="Icon" sprite="{bufficon|once}" size="${icon_size}" pos="${icon_pos}" color="${icon_color}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" />
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" height="${text_height}" font_size="32" color="${text_color}" text="${text}" justify="${text_justify}" effect="outline" />
+			<sprite depth="8" name="border" color="${border_color}" type="sliced" fillcenter="false" visible="{# bufficon != ''}" />
 		</panel>
-	</sui_hud_detailedBuff>
+	</sui_hud_buff>
 
-	<sui_hud_detailedBuffList>
+	<sui_hud_buff_round>
+		<panel width="${width}" height="${height}" pos="${pos}" controller="ActiveBuffEntry" disableautobackground="true" >	
+			<sprite depth="1" name="border" color="${border_color}" sprite="ui_game_filled_circle" globalopacity="${border_globalopacity}" visible="{# bufficon != ''}" />
+			<sprite depth="2" name="background" pos="${background_pos}" width="${width-Round(border_thickness, 0)}" height="${height-Round(border_thickness, 0)}" color="${background_color}" sprite="ui_game_filled_circle" globalopacity="${background_globalopacity}" visible="{# bufficon != ''}" />
+			<sprite depth="3" name="Icon" sprite="{bufficon|once}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" />
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" height="${text_height}" font_size="32" color="${text_color}" text="${text}" justify="${text_justify}" effect="outline" />
+		</panel>
+	</sui_hud_buff_round>
+
+	<sui_hud_buffList_10rowUp>
 		<rect name="BuffList" pos="${pos}" controller="ActiveBuffList">
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,0" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,50" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,100" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,150" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*3+(Round(panel_offset, 0)*3)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,200" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*4+(Round(panel_offset, 0)*4)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,250" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*5+(Round(panel_offset, 0)*5)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,300" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*6+(Round(panel_offset, 0)*6)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,350" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*7+(Round(panel_offset, 0)*7)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,400" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*8+(Round(panel_offset, 0)*8)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 
-			<sui_hud_detailedBuff width="${width}" height="${height}" pos="0,450" icon_size="${icon_size}" icon_pos="${icon_pos}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_size="${text_size}" text_color="${text_color}" />
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*9+(Round(panel_offset, 0)*9)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
 		</rect>
-	</sui_hud_detailedBuffList>
+	</sui_hud_buffList_10rowUp>
+
+	<sui_hud_buffList_3row5colUp>
+		<rect name="BuffList" pos="${pos}" controller="ActiveBuffList">
+			<!--Row 1-->
+			<sui_hud_buff width="${width}" height="${height}" pos="0,0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*3+(Round(panel_offset, 0)*3)},0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*4+(Round(panel_offset, 0)*4)},0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<!--Row 2-->
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*3+(Round(panel_offset, 0)*3)},${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*4+(Round(panel_offset, 0)*4)},${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<!--Row 3-->
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*4+(Round(panel_offset, 0)*4)},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+		</rect>
+	</sui_hud_buffList_3row5colUp>
+
+	<sui_hud_buffList_5row3colUp>
+		<rect name="BuffList" pos="${pos}" controller="ActiveBuffList">
+			<!--Row 1-->
+			<sui_hud_buff width="${width}" height="${height}" pos="0,0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},0" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<!--Row 2-->
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},${Round(panel_offset, 0)+height}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<!--Row 3-->
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<!--Row 4-->
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*3+(Round(panel_offset, 0)*3)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},${height*3+(Round(panel_offset, 0)*3)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*3+(Round(panel_offset, 0)*3)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<!--Row 5-->
+			<sui_hud_buff width="${width}" height="${height}" pos="0,${height*4+(Round(panel_offset, 0)*4)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},${height*4+(Round(panel_offset, 0)*4)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*4+(Round(panel_offset, 0)*4)}" border_color="${border_color}" background_color="${background_color}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+		</rect>
+	</sui_hud_buffList_5row3colUp>
+
+	<sui_hud_buffList_10rowUp_round>
+		<rect name="BuffList" pos="${pos}" controller="ActiveBuffList">
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,0" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${Round(panel_offset, 0)+height}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*3+(Round(panel_offset, 0)*3)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*4+(Round(panel_offset, 0)*4)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*5+(Round(panel_offset, 0)*5)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*6+(Round(panel_offset, 0)*6)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*7+(Round(panel_offset, 0)*7)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*8+(Round(panel_offset, 0)*8)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*9+(Round(panel_offset, 0)*9)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+		</rect>
+	</sui_hud_buffList_10rowUp_round>
+
+	<sui_hud_buffList_3row5colUp_round>
+		<rect name="BuffList" pos="${pos}" controller="ActiveBuffList">
+			<!--Row 1-->
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,0" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},0" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},0" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*3+(Round(panel_offset, 0)*3)},0" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*4+(Round(panel_offset, 0)*4)},0" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<!--Row 2-->
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${Round(panel_offset, 0)+height}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},${Round(panel_offset, 0)+height}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},${Round(panel_offset, 0)+height}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*3+(Round(panel_offset, 0)*3)},${Round(panel_offset, 0)+height}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*4+(Round(panel_offset, 0)*4)},${Round(panel_offset, 0)+height}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<!--Row 3-->
+			<sui_hud_buff_round width="${width}" height="${height}" pos="0,${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${Round(panel_offset, 0)+width},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+
+			<sui_hud_buff_round width="${width}" height="${height}" pos="${width*4+(Round(panel_offset, 0)*4)},${height*2+(Round(panel_offset, 0)*2)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_pos="${background_pos}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" text_height="${text_height}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" tooltip="${tooltip}" on_hover="${on_hover}" />
+		</rect>
+	</sui_hud_buffList_3row5colUp_round>
 
 </append>
 </configs>

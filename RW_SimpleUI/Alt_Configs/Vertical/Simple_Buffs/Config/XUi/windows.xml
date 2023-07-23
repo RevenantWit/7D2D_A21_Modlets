@@ -46,6 +46,54 @@
 
 		<rect name="tabsContents" ><!--Do not remove or change this rect name-->
 
+			<!--Vertical Layout 1/2-->
+			<rect name="verticalTab1" >
+				<rect name="leftHUDwindow" pos="0,18" side="right">
+
+					<!--Vertical Stealth Bar-->
+					<sui_hud_vertical_statBar width="42" height="167" pos="172,0" stat_type="Stealth" globalopacitymod="0.95" barBackground_fill="1" barContent_color="{stealthcolor}" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+
+					<!--Vertical Stamina Bar-->
+					<sui_hud_vertical_statBar width="42" height="150" pos="0,0" stat_type="Stamina" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+
+					<!--Vertical Health Bar-->
+					<sui_hud_vertical_statBar width="42" height="150" pos="43,0" stat_type="Health" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+
+					<!--Vertical Food Bar-->
+					<sui_hud_overfillfix_statBar width="42" height="150" pos="86,0" stat_type="Food" globalopacitymod="1.2" barContent_color="0,255,54,128" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+
+					<!--Vertical Water Bar-->
+					<sui_hud_overfillfix_statBar width="42" height="150" pos="129,0" stat_type="Water" globalopacitymod="1.2" barContent_color="64,164,223,150" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+				</rect>
+
+				<!--Simple Buffs 3x5-->
+				<sui_hud_buffList_3row5colUp pos="0,83" width="32" height="62" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="5,-33" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="3,-12" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
+			</rect>
+
+			<!--Vertical Layout 2/2-->
+			<rect name="verticalTab2" >
+				<rect name="leftHUDwindow" pos="0,18" side="right">
+
+					<!--Vertical Stealth Bar-->
+					<sui_hud_vertical_statBar width="42" height="167" pos="172,0" stat_type="Stealth" globalopacitymod="0.95" barBackground_fill="1" barContent_color="{stealthcolor}" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+
+					<!--Vertical Stamina Bar-->
+					<sui_hud_vertical_statBar width="42" height="150" pos="0,0" stat_type="Stamina" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+
+					<!--Vertical Health Bar-->
+					<sui_hud_vertical_statBar width="42" height="150" pos="43,0" stat_type="Health" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+
+					<!--Vertical Food Bar-->
+					<sui_hud_overfillfix_statBar width="42" height="150" pos="86,0" stat_type="Food" globalopacitymod="1.2" barContent_color="0,255,54,128" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+
+					<!--Vertical Water Bar-->
+					<sui_hud_overfillfix_statBar width="42" height="150" pos="129,0" stat_type="Water" globalopacitymod="1.2" barContent_color="64,164,223,150" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
+				</rect>
+
+				<!--Detailed Buffs 10x-->
+				<sui_hud_buffList_10rowUp pos="0,63" width="42" height="42" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="28,28" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="49,-7" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
+			</rect>
+
 			<!--Classic Simple UI Layout 1/2-->
 			<rect name="classicTab1" >
 				<rect name="leftHUDwindow" pos="0,13" side="right">
@@ -110,54 +158,6 @@
 
 					<sui_hud_buffList_10rowUp pos="0,108" width="42" height="42" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="28,28" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="49,-10" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
 				</rect>
-			</rect>
-
-			<!--Vertical Layout 1/2-->
-			<rect name="verticalTab1" >
-				<rect name="leftHUDwindow" pos="0,18" side="right">
-
-					<!--Vertical Stealth Bar-->
-					<sui_hud_vertical_statBar width="42" height="167" pos="172,0" stat_type="Stealth" globalopacitymod="0.95" barBackground_fill="1" barContent_color="{stealthcolor}" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-
-					<!--Vertical Stamina Bar-->
-					<sui_hud_vertical_statBar width="42" height="150" pos="0,0" stat_type="Stamina" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-
-					<!--Vertical Health Bar-->
-					<sui_hud_vertical_statBar width="42" height="150" pos="43,0" stat_type="Health" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-
-					<!--Vertical Food Bar-->
-					<sui_hud_overfillfix_statBar width="42" height="150" pos="86,0" stat_type="Food" globalopacitymod="1.2" barContent_color="0,255,54,128" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-
-					<!--Vertical Water Bar-->
-					<sui_hud_overfillfix_statBar width="42" height="150" pos="129,0" stat_type="Water" globalopacitymod="1.2" barContent_color="64,164,223,150" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-				</rect>
-
-				<!--Simple Buffs 3x5-->
-				<sui_hud_buffList_3row5colUp pos="0,83" width="32" height="62" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="5,-33" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="3,-12" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
-			</rect>
-
-			<!--Vertical Layout 2/2-->
-			<rect name="verticalTab2" >
-				<rect name="leftHUDwindow" pos="0,18" side="right">
-
-					<!--Vertical Stealth Bar-->
-					<sui_hud_vertical_statBar width="42" height="167" pos="172,0" stat_type="Stealth" globalopacitymod="0.95" barBackground_fill="1" barContent_color="{stealthcolor}" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-
-					<!--Vertical Stamina Bar-->
-					<sui_hud_vertical_statBar width="42" height="150" pos="0,0" stat_type="Stamina" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-
-					<!--Vertical Health Bar-->
-					<sui_hud_vertical_statBar width="42" height="150" pos="43,0" stat_type="Health" globalopacitymod="1.1" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text="{statcurrent}" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-
-					<!--Vertical Food Bar-->
-					<sui_hud_overfillfix_statBar width="42" height="150" pos="86,0" stat_type="Food" globalopacitymod="1.2" barContent_color="0,255,54,128" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-
-					<!--Vertical Water Bar-->
-					<sui_hud_overfillfix_statBar width="42" height="150" pos="129,0" stat_type="Water" globalopacitymod="1.2" barContent_color="64,164,223,150" filldirection="vertical" sprite="{staticon|once}" icon_color="[white]" icon_size="30,30" icon_pos="21,-130" text_pos="0,-90" text_color="[white]" text_width="41" text_height="18" text_justify="center" />
-				</rect>
-
-				<!--Detailed Buffs 10x-->
-				<sui_hud_buffList_10rowUp pos="0,63" width="42" height="42" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="28,28" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="49,-7" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
 			</rect>
 
 			<!--Radial Layout 1/2-->

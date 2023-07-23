@@ -46,6 +46,20 @@
 
 		<rect name="tabsContents" ><!--Do not remove or change this rect name-->
 
+			<!--None Layout 1/2-->
+			<rect name="noneTab1" >
+
+				<!--Simple Buffs 5x3-->
+				<sui_hud_buffList_5row3colUp pos="0,-84" width="55" height="46" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="16,-20" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="15,-4" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
+			</rect>
+
+			<!--None layout 2/2-->
+			<rect name="noneTab2" >
+
+				<!--Detailed Buffs 10x-->
+				<sui_hud_buffList_10rowUp pos="0,-88" width="42" height="42" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="28,28" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="49,-10" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
+			</rect>
+
 			<!--Classic Simple UI Layout 1/2-->
 			<rect name="classicTab1" >
 				<rect name="leftHUDwindow" pos="0,13" side="right">
@@ -216,20 +230,6 @@
 
 				<!--Round Detailed Buffs 10x-->
 				<sui_hud_buffList_10rowUp_round pos="0,66" width="34" height="34" panel_offset="3" border_color="{buffcolor}" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" icon_size="20,20" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="42,-5" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
-			</rect>
-
-			<!--None Layout 1/2-->
-			<rect name="noneTab1" >
-
-				<!--Simple Buffs 5x3-->
-				<sui_hud_buffList_5row3colUp pos="0,-84" width="55" height="46" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="22,22" icon_pos="16,-20" icon_color="{buffcolor}" text="{buffdisplayinfo}" text_pos="15,-4" text_width="25" text_height="12" text_color="[white]" text_justify="center" tooltip="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" on_hover="true" />
-			</rect>
-
-			<!--None layout 2/2-->
-			<rect name="noneTab2" >
-
-				<!--Detailed Buffs 10x-->
-				<sui_hud_buffList_10rowUp pos="0,-88" width="42" height="42" panel_offset="3" border_color="0,0,0,200" background_color="16,16,16,220" icon_size="28,28" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="49,-10" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
 			</rect>
 
 		</rect>

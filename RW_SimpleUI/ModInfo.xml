@@ -2,8 +2,8 @@
 <xml>
 	<Name value="RW_SimpleUI"/>
 	<DisplayName value="Simple UI Left HUD"/>
-	<Version value="3.0.0"/>
-	<Description value="Replaces left HUD with one that has tabs for changing left HUD elements in live game"/>
+	<Version value="3.1.0"/>
+	<Description value="Replaces left HUD with one that has tabs for changing left HUD layouts in live game. Comes with some alt configs for changing what layout is default."/>
 	<Author value="RevenantWit"/>
-	<Website value=""/>
+	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
 </xml>

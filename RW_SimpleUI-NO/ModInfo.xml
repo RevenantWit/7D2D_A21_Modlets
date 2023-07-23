@@ -2,8 +2,8 @@
 <xml>
 	<Name value="RW_SimpleUI-NO"/>
 	<DisplayName value="Simple UI Left HUD No Options"/>
-	<Version value="2.2.0"/>
-	<Description value="Same default Simple UI left HUD look minus any buttons or options"/>
+	<Version value="3.1.0"/>
+	<Description value="Simple UI minus any buttons or options that can be changed in live game. Comes with alt configs that can be swapped for any Simple UI layout offered in the normal version."/>
 	<Author value="RevenantWit"/>
-	<Website value=""/>
+	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
 </xml>

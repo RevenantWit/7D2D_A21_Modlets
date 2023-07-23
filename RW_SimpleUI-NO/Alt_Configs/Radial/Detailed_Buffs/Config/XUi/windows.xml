@@ -1,0 +1,50 @@
+<configs>
+
+<remove xpath="//window[@name='windowToolbelt']//rect[@stat_type='Food' or @stat_type='Water']"/>
+
+<append xpath="/windows">
+
+	<window name="RevsWW_LeftHUD" anchor="LeftBottom" pos="9,156" >
+		<rect name="leftHUDwindow" width="168" side="right">
+			<!--Radial Stealth Bar-->
+			<sui_hud_radial_statBar width="50" height="50" pos="175,-46" stat_type="Stealth" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="1" barContent_color="{stealthcolor}" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="26" topLayer_width="26" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="25,25" icon_pos="24,-24" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+			<!--Radial Stamina Bar-->
+			<sui_hud_radial_statBar width="75" height="75" pos="108,-73" stat_type="Stamina" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+			<!--Radial Health Bar-->
+			<sui_hud_radial_statBar width="75" height="75" pos="-1,-73" stat_type="Health" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+			<!--Radial Food Bar-->
+			<sui_hud_simple_radial_statBar width="75" height="75" pos="108,6" stat_type="Food" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="0,255,54,128" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+			<!--Radial Water Bar-->
+			<sui_hud_simple_radial_statBar width="75" height="75" pos="-1,6" stat_type="Water" bottomLayer_color="[white]" bottomLayer_globalopacity="false" barBackground_color="110,110,110,128" barContent_color="64,164,223,150" topLayer_pos="12,-12" topLayer_color="[black]" topLayer_height="51" topLayer_width="51" topLayer_globalopacity="false" sprite="{staticon|once}" icon_color="[white]" icon_size="32,32" icon_pos="36,-36" text="" text_pos="44,-10" text_color="[white]" text_width="72" text_height="35" text_justify="center" />
+
+			<!--Round Player Core Temp-->
+			<rect name="coreTemp" controller="MapStats">
+				<sui_hud_simpleNoFill_round width="50" height="50" pos="66,-46" border_color="[white]" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" sprite="ui_game_symbol_player" icon_size="20,20" icon_pos="15,-5" icon_color="[white]" text="[DECEA3]{playercoretemp}[-]" text_pos="9,-28" text_width="34" text_height="12" text_color="[white]" text_justify="center" tooltip="{playercoretemptitle}: {playercoretemp}" on_hover="true" />
+			</rect>
+		</rect>
+
+		<!--Round Detailed Buffs 10x-->
+		<sui_hud_buffList_10rowUp_round pos="0,48" width="34" height="34" panel_offset="3" border_color="{buffcolor}" border_thickness="2" border_globalopacity="false" background_pos="1,-1" background_color="[black]" background_globalopacity="false" icon_size="20,20" icon_pos="7,-7" icon_color="{buffcolor}" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_pos="42,-5" text_width="240" text_height="24" text_color="[white]" text_justify="left" tooltip="" on_hover="false" />
+
+		<!--The vanilla buffs using the BuffPopoutList controller must exist somewhere in the HUD.-->
+		<!--If the BuffPopout does not exist the stamina bar will spam console with red errors expecting it.-->
+		<!--Since I don't like the vanilla buffs slow slide up effect I will just force the BuffPopout to not be visible so it's never rendered-->
+		<!--Only the last BuffPopout in this file will use the default slide up effect when crouched so leave at bottom of file to prevent elsewhere-->
+		<rect name="Hidden" controller="DeathBar" visible="{never}" >
+			<rect name="hud" pos="90,132" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
+				<panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true" >
+					<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
+					<sprite depth="4" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]"/>
+					<label depth="6" name="TextContent" pos="-37,0" font_size="28" color="[white]" justify="center" width="118" height="40" pivot="left"/>
+				</panel>
+			</rect>
+		</rect>
+
+	</window>
+
+</append>
+</configs>
