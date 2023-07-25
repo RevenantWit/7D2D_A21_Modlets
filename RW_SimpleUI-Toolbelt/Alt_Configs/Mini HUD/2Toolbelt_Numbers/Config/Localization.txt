@@ -1,0 +1,10 @@
+Key,english
+
+suiToolbeltTab1,"Default"
+suiToolbeltTab2,"HUD"
+suiToolbeltTab3,"Simple"
+suiToolbeltTab4,"Alternate"
+
+suiToolbeltXPbar,"LEVEL:"
+
+suiToolbeltTempText,"World Temp:"

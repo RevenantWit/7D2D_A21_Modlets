@@ -11,9 +11,6 @@
 
 			<!--XP Bar-->
 			<sui_toolbelt_xpBar height="18" width="751" pos="1,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="345,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="17,-2" text_width="752" text_height="14" text_color="[white]" text_justify="center" />
-
-			<!--Toolbelt Numbers-->
-			<sui_toolbelt_numbers10 pos="0,14" cell_height="75" cell_width="75" background_pos="25,2" background_sprite="menu_tile_01" background_height="22" background_width="26" background_rotation="0" background_color="[darkestGrey]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.93" text_pos="0,1" text_width="75" text_height="16" text_color="[white]" text_justify="center"/>
 		</rect>
 	</window>
 </append>

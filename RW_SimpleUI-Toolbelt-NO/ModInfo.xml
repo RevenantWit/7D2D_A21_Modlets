@@ -2,8 +2,8 @@
 <xml>
 	<Name value="RW_SimpleUI-Toolbelt-NO"/>
 	<DisplayName value="Simple UI Toolbelt No Options"/>
-	<Version value="2.0.0"/>
-	<Description value="Same default Simple UI Toolbelt look minus any buttons or options"/>
+	<Version value="3.1.0"/>
+	<Description value="Simple UI Toolbelt minus any buttons or options that can be changed in live game. Comes with alt configs that can be swapped for any Simple UI Toolbelt layout offered in the normal version."/>
 	<Author value="RevenantWit"/>
-	<Website value=""/>
+	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
 </xml>

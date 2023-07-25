@@ -1,0 +1,122 @@
+<configs>
+
+<append xpath="/controls">
+
+	<sui_vanillaToolbelt>
+		<rect name="Toolbelt" pos="3,-3" controller="Toolbelt">
+			<grid depth="10" name="inventory" rows="1" cols="10" pos="0,0" cell_width="75" cell_height="75" repeat_content="true">
+				<item_stack name="0"/>
+			</grid>
+			<button depth="3" name="btnClearInventory1" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" pos="800, -32" style="icon32px, press, hover" pivot="center" sound="[paging_click]" visible="{creativewindowopen}" />
+			<grid depth="10" name="inventory2" rows="1" cols="10" pos="0,82" cell_width="75" cell_height="75" repeat_content="true" visible="{secondrow}">
+				<item_stack name="0"/>
+			</grid>
+			<button depth="3" name="btnClearInventory2" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" pos="800, 50" style="icon32px, press, hover" pivot="center" sound="[paging_click]" visible="{# creativewindowopen and secondrow}" />
+		</rect>
+	</sui_vanillaToolbelt>
+
+	<sui_toolbelt_xpBar>
+		<rect name="xpBar" height="${height}" width="${width}" pos="${pos}" >
+			<sprite depth="1" color="${border_color}" sprite="menu_empty2px" type="sliced" fillcenter="false" />
+			<sprite depth="3" pos="1,-1" height="${height-2}" width="${width-2}" color="${background_color}" sprite="menu_empty2px" type="sliced" />
+			<sprite depth="4" pos="1,-1" height="${height-2}" width="${width-2}" name="BarContent" color="${barContent_color}" type="filled" filldirection="${filldirection}" fill="{xp}" />
+			<sprite depth="6" name="Icon" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" />
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}" controller="HUDStatBar" />
+			<sprite depth="8" name="border" color="${border_color}" type="sliced" fillcenter="false" />
+		</rect>
+	</sui_toolbelt_xpBar>
+
+	<sui_toolbelt_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}" >
+			<sprite depth="1" name="border" color="0,0,0,150" type="sliced" globalopacitymod="${globalopacitymod}" />
+			<sprite depth="2" name="background" color="0,0,0,140" type="sliced" globalopacitymod="${globalopacitymod}" />
+			<filledsprite depth="3" name="background" color="110,110,110,128" width="${width-2}" type="filled" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}" />
+			<filledsprite depth="5" name="BarContent" color="${barContent_color}" width="${width-2}" type="filled" fill="0" globalopacitymod="${globalopacitymod}" />
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" />
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}" />
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" globalopacitymod="${globalopacitymod}" />
+			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" fillcenter="false" type="filled" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}" />
+			<filledsprite depth="3" name="background" color="0,0,0,255" width="${width-1}" fillcenter="false" type="filled" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}" />
+		</rect>
+	</sui_toolbelt_statBar>
+
+	<sui_toolbelt_vertical_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="1" name="border" color="0,0,0,150" type="sliced" globalopacitymod="${globalopacitymod}" />
+			<sprite depth="2" name="background" color="0,0,0,140" type="sliced" globalopacitymod="${globalopacitymod}" />
+			<filledsprite depth="3" name="barBackground" color="110,110,110,128" height="${height-2}" type="filled" filldirection="vertical" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}" />
+			<filledsprite depth="5" name="BarContent" color="${barContent_color}" height="${height-2}" type="filled" filldirection="vertical" fill="0" globalopacitymod="${globalopacitymod}" />
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}" />
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" globalopacitymod="${globalopacitymod}"/>
+			<filledsprite depth="8" name="background" color="0,0,0,255" height="${height}" fillcenter="false" type="filled" filldirection="vertical" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}" />
+			<filledsprite depth="3" name="background" color="0,0,0,255" height="${height-1}" fillcenter="false" type="filled" filldirection="vertical" fill="${barBackground_fill}" globalopacitymod="${globalopacitymod}" />
+		</rect>
+	</sui_toolbelt_vertical_statBar>
+
+	<sui_toolbelt_simple_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="1" color="[black]" sprite="menu_empty2px" type="sliced" fillcenter="false" />
+			<sprite depth="3" pos="1,-1" height="${height-2}" width="${width-2}" color="110,110,110,128" sprite="menu_empty2px" type="sliced" globalopacitymod="${globalopacitymod}" />
+			<sprite depth="4" pos="1,-1" height="${height-2}" width="${width-2}" name="BarContent" color="${barContent_color}" type="filled" filldirection="${filldirection}" fill="0" globalopacitymod="${globalopacitymod}" />
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}"/>
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+		</rect>
+	</sui_toolbelt_simple_statBar>
+
+	<sui_toolbelt_overfillfix_statBar>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="1" color="[black]" sprite="menu_empty2px" type="sliced" fillcenter="false" />
+			<sprite depth="3" pos="1,-1" height="${height-2}" width="${width-2}" color="110,110,110,128" sprite="menu_empty2px" type="sliced" globalopacitymod="${globalopacitymod}" />
+			<sprite depth="4" pos="1,-1" height="${height-2}" width="${width-2}" name="BarContent" color="${barContent_color}" type="filled" filldirection="${filldirection}" fill="0" globalopacitymod="${globalopacitymod}" />
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="{statcurrent}%" width="${text_width}" height="${text_height}" visible="{# statcurrent != '100' and statcurrent != '99'}" />
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="100%" width="${text_width}" height="${text_height}" visible="{# statcurrent = '100' or statcurrent = '99'}" />
+			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+		</rect>
+	</sui_toolbelt_overfillfix_statBar>
+
+	<sui_toolbelt_doubleNoText_stealthBar>
+		<rect name="stealthBar" pos="${pos}" width="${width}" height="${height}" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}" >
+			<filledsprite depth="3" name="BarContent" sprite="ui_game_header_insert" pos="-7,0" color="{stealthcolor}" type="filled" fill="0" globalopacitymod="0.95"/>
+			<filledsprite depth="4" name="BarContent" sprite="ui_game_header_insert" pos="7,${-height}" color="{stealthcolor}" type="filled" fill="0" rotation="180" controller="HUDStatBar" stat_type="Stealth"  globalopacitymod="${globalopacitymod}" />
+			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+		</rect>
+	</sui_toolbelt_doubleNoText_stealthBar>
+
+	<sui_toolbelt_simpleNoFill>
+		<rect height="${height}" width="${width}" pos="${pos}" >
+			<sprite depth="1" color="${border_color}" sprite="menu_empty2px" type="sliced" fillcenter="false" />
+			<sprite depth="3" pos="1,-1" height="${height-2}" width="${width-2}" color="${background_color}" sprite="menu_empty2px" type="sliced" tooltip="${tooltip}" on_hover="${on_hover}" />
+			<sprite depth="6" name="Icon" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" />
+			<label depth="7" name="TextContent" pos="${text_pos}" font_size="32" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" height="${text_height}" />
+			<sprite depth="8" name="border" color="${border_color}" type="sliced" fillcenter="false" />
+		</rect>
+	</sui_toolbelt_simpleNoFill>
+
+	<sui_toolbelt_numbers10>
+		<rect name="ToolbeltNumbers" pos="${pos}">
+			<grid name="backgrounds" depth="0" rows="1" cols="10" cell_width="${cell_width}" cell_height="${cell_height}" repeat_content="true">
+				<rect >
+					<sprite depth="0" pos="${background_pos}" sprite="${background_sprite}" height="${background_height}" width="${background_width}" rotation="${background_rotation}" color="${background_color}" foregroundlayer="false" globalopacity="${background_globalopacity}" globalopacitymod="${background_globalopacitymod}" />
+				</rect>
+			</grid>
+
+			<grid name="numbers" depth="11" rows="1" cols="10" cell_width="${cell_width}" cell_height="${cell_height}" repeat_content="false">
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="1" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="2" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="3" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="4" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="5" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="6" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="7" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="8" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="9" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+				<label depth="12" pos="${text_pos}" width="${text_width}" height="${text_height}" text="0" font_size="32" effect="outline" color="${text_color}" justify="${text_justify}" />
+			</grid>
+		</rect>
+	</sui_toolbelt_numbers10>
+
+</append>
+</configs>

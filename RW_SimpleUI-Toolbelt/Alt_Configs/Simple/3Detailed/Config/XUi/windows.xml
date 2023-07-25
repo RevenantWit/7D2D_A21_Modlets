@@ -48,35 +48,6 @@
 
 		<rect name="tabsContents"><!--Do not remove or change this rect name(tabsContents)-->
 
-			<!--Simple Layout 1/3-->
-			<rect name="simpleTab1" >
-				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" xp_fill_speed="2.5" >
-					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
-
-					<!--Vanilla Toolbelt-->
-					<sui_vanillaToolbelt />
-
-					<!--XP Bar-->
-					<sui_toolbelt_xpBar height="18" width="452" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="190,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="35,-2" text_width="400" text_height="14" text_color="[white]" text_justify="center" />
-				</rect>
-			</rect>
-
-			<!--Simple Layout 2/3-->
-			<rect name="simpleTab2" >
-				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" xp_fill_speed="2.5" >
-					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
-
-					<!--Vanilla Toolbelt-->
-					<sui_vanillaToolbelt />
-
-					<!--XP Bar-->
-					<sui_toolbelt_xpBar height="18" width="452" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="190,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="35,-2" text_width="400" text_height="14" text_color="[white]" text_justify="center" />
-
-					<!--Toolbelt Numbers-->
-					<sui_toolbelt_numbers10 pos="0,14" cell_height="75" cell_width="75" background_pos="25,2" background_sprite="menu_tile_01" background_height="22" background_width="26" background_rotation="0" background_color="[darkestGrey]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.93" text_pos="0,1" text_width="75" text_height="16" text_color="[white]" text_justify="center"/>
-				</rect>
-			</rect>
-
 			<!--Simple Layout 3/3-->
 			<rect name="simpleTab3" >
 				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" xp_fill_speed="2.5" >
@@ -102,8 +73,8 @@
 				</rect>
 			</rect>
 
-			<!--Alternate Layout 1/2-->
-			<rect name="alternateTab1" >
+			<!--Simple Layout 2/3-->
+			<rect name="simpleTab2" >
 				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" xp_fill_speed="2.5" >
 					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
 
@@ -114,7 +85,20 @@
 					<sui_toolbelt_xpBar height="18" width="452" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="190,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="35,-2" text_width="400" text_height="14" text_color="[white]" text_justify="center" />
 
 					<!--Toolbelt Numbers-->
-					<sui_toolbelt_numbers10 pos="0,14" cell_height="75" cell_width="75" background_pos="25,3" background_sprite="ui_game_filled_circle" background_height="22" background_width="26" background_rotation="0" background_color="[black]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.95" text_pos="0,1" text_width="75" text_height="16" text_color="[white]" text_justify="center"/>
+					<sui_toolbelt_numbers10 pos="0,14" cell_height="75" cell_width="75" background_pos="25,2" background_sprite="menu_tile_01" background_height="22" background_width="26" background_rotation="0" background_color="[darkestGrey]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.93" text_pos="0,1" text_width="75" text_height="16" text_color="[white]" text_justify="center"/>
+				</rect>
+			</rect>
+
+			<!--Simple Layout 1/3-->
+			<rect name="simpleTab1" >
+				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" xp_fill_speed="2.5" >
+					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+
+					<!--Vanilla Toolbelt-->
+					<sui_vanillaToolbelt />
+
+					<!--XP Bar-->
+					<sui_toolbelt_xpBar height="18" width="452" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="190,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="35,-2" text_width="400" text_height="14" text_color="[white]" text_justify="center" />
 				</rect>
 			</rect>
 
@@ -141,8 +125,24 @@
 				</rect>
 			</rect>
 
-			<!--HUD Layout 1/3-->
-			<rect name="hudTab1" >
+			<!--Alternate Layout 1/2-->
+			<rect name="alternateTab1" >
+				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" xp_fill_speed="2.5" >
+					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+
+					<!--Vanilla Toolbelt-->
+					<sui_vanillaToolbelt />
+
+					<!--XP Bar-->
+					<sui_toolbelt_xpBar height="18" width="452" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="190,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="35,-2" text_width="400" text_height="14" text_color="[white]" text_justify="center" />
+
+					<!--Toolbelt Numbers-->
+					<sui_toolbelt_numbers10 pos="0,14" cell_height="75" cell_width="75" background_pos="25,3" background_sprite="ui_game_filled_circle" background_height="22" background_width="26" background_rotation="0" background_color="[black]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.95" text_pos="0,1" text_width="75" text_height="16" text_color="[white]" text_justify="center"/>
+				</rect>
+			</rect>
+
+			<!--HUD Layout 3/3-->
+			<rect name="hudTab3" >
 				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" >
 
 					<!--[START] Hidden when using vehicle-->
@@ -156,7 +156,19 @@
 						<sui_toolbelt_doubleNoText_stealthBar pos="376,16" width="380" height="24" globalopacitymod="0.96" sprite="{staticon|once}" icon_color="[white]" icon_size="18,18" icon_pos="0,-8" />
 
 						<!--XP Bar-->
-						<sui_toolbelt_xpBar height="18" width="452" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="190,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="35,-2" text_width="400" text_height="14" text_color="[white]" text_justify="center" />
+						<sui_toolbelt_xpBar height="18" width="301" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="56,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="10,-2" text_width="175" text_height="14" text_color="[white]" text_justify="center" />
+
+						<!--Temp. and Elevation-->
+						<rect controller="MapStats">
+							<sui_toolbelt_simpleNoFill height="18" width="77" pos="376,-77" border_color="[black]" background_color="[mediumGrey]" sprite="ui_game_symbol_player" icon_color="[white]" icon_size="14,14" icon_pos="12,-9" text="{playercoretemp}" text_pos="9,-3" text_width="70" text_height="14" text_color="[white]" text_justify="center" tooltip="{playercoretemptitle}: [DECEA3]{playercoretemp}[-]" on_hover="true" />
+
+							<sui_toolbelt_simpleNoFill height="18" width="77" pos="451,-77" border_color="[black]" background_color="[mediumGrey]" sprite="ui_game_symbol_climb" icon_color="[white]" icon_size="14,14" icon_pos="15,-9" text="{mapelevation} M" text_pos="12,-3" text_width="70" text_height="14" text_color="[white]" text_justify="center" tooltip="{mapelevationtitle}: [DECEA3]{mapelevation} M[-]" on_hover="true" />
+
+							<sui_toolbelt_simpleNoFill height="18" width="77" pos="526,-77" border_color="[black]" background_color="[mediumGrey]" sprite="ui_game_symbol_temperature" icon_color="[white]" icon_size="14,14" icon_pos="16,-9" text="{maptemperature}" text_pos="10,-3" text_width="70" text_height="14" text_color="[white]" text_justify="center" tooltip="{# localization('suiToolbeltTempText')} [DECEA3]{maptemperature}[-]" on_hover="true" />
+						</rect>
+
+						<!--Toolbelt Numbers-->
+						<sui_toolbelt_numbers10 pos="0,14" cell_height="75" cell_width="75" background_pos="28,1" background_sprite="menu_tile_01" background_height="20" background_width="20" background_rotation="0" background_color="[darkestGrey]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.93" text_pos="0,1" text_width="75" text_height="16" text_color="[white]" text_justify="center"/>
 					</rect>
 					<!--[END] Hidden when using vehicle-->
 
@@ -210,8 +222,8 @@
 				</rect>
 			</rect>
 
-			<!--HUD Layout 3/3-->
-			<rect name="hudTab3" >
+			<!--HUD Layout 1/3-->
+			<rect name="hudTab1" >
 				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" >
 
 					<!--[START] Hidden when using vehicle-->
@@ -225,19 +237,7 @@
 						<sui_toolbelt_doubleNoText_stealthBar pos="376,16" width="380" height="24" globalopacitymod="0.96" sprite="{staticon|once}" icon_color="[white]" icon_size="18,18" icon_pos="0,-8" />
 
 						<!--XP Bar-->
-						<sui_toolbelt_xpBar height="18" width="301" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="56,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="10,-2" text_width="175" text_height="14" text_color="[white]" text_justify="center" />
-
-						<!--Temp. and Elevation-->
-						<rect controller="MapStats">
-							<sui_toolbelt_simpleNoFill height="18" width="77" pos="376,-77" border_color="[black]" background_color="[mediumGrey]" sprite="ui_game_symbol_player" icon_color="[white]" icon_size="14,14" icon_pos="12,-9" text="{playercoretemp}" text_pos="9,-3" text_width="70" text_height="14" text_color="[white]" text_justify="center" tooltip="{playercoretemptitle}: [DECEA3]{playercoretemp}[-]" on_hover="true" />
-
-							<sui_toolbelt_simpleNoFill height="18" width="77" pos="451,-77" border_color="[black]" background_color="[mediumGrey]" sprite="ui_game_symbol_climb" icon_color="[white]" icon_size="14,14" icon_pos="15,-9" text="{mapelevation} M" text_pos="12,-3" text_width="70" text_height="14" text_color="[white]" text_justify="center" tooltip="{mapelevationtitle}: [DECEA3]{mapelevation} M[-]" on_hover="true" />
-
-							<sui_toolbelt_simpleNoFill height="18" width="77" pos="526,-77" border_color="[black]" background_color="[mediumGrey]" sprite="ui_game_symbol_temperature" icon_color="[white]" icon_size="14,14" icon_pos="16,-9" text="{maptemperature}" text_pos="10,-3" text_width="70" text_height="14" text_color="[white]" text_justify="center" tooltip="{# localization('suiToolbeltTempText')} [DECEA3]{maptemperature}[-]" on_hover="true" />
-						</rect>
-
-						<!--Toolbelt Numbers-->
-						<sui_toolbelt_numbers10 pos="0,14" cell_height="75" cell_width="75" background_pos="28,1" background_sprite="menu_tile_01" background_height="20" background_width="20" background_rotation="0" background_color="[darkestGrey]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.93" text_pos="0,1" text_width="75" text_height="16" text_color="[white]" text_justify="center"/>
+						<sui_toolbelt_xpBar height="18" width="452" pos="151,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="14,14" icon_pos="190,-9" text="{# localization('suiToolbeltXPbar')}    {cvar($LastPlayerLevel)}" text_pos="35,-2" text_width="400" text_height="14" text_color="[white]" text_justify="center" />
 					</rect>
 					<!--[END] Hidden when using vehicle-->
 
@@ -255,8 +255,8 @@
 				</rect>
 			</rect>
 
-			<!--Mini HUD Layout 1/3-->
-			<rect name="minihudTab1" >
+			<!--Mini HUD Layout 3/3-->
+			<rect name="minihudTab3" >
 				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" >
 
 					<!--[START] Hidden when using vehicle-->
@@ -270,21 +270,24 @@
 						<sui_toolbelt_doubleNoText_stealthBar pos="376,14" width="380" height="23" globalopacitymod="0.96" sprite="{staticon|once}" icon_color="[white]" icon_size="16,16" icon_pos="0,-8" />
 
 						<!--XP Bar-->
-						<sui_toolbelt_xpBar height="18" width="92" pos="511,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="" text_pos="28,-3" text_width="55" text_height="14" text_color="[white]" text_justify="center" />
+						<sui_toolbelt_xpBar height="18" width="92" pos="511,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="{cvar($LastPlayerLevel)}" text_pos="28,-3" text_width="55" text_height="14" text_color="[white]" text_justify="center" />
+
+						<!--Toolbelt Numbers-->
+						<sui_toolbelt_numbers10 pos="0,12" cell_height="75" cell_width="75" background_pos="30,2" background_sprite="menu_tile_01" background_height="16" background_width="14" background_rotation="0" background_color="[darkestGrey]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.93" text_pos="0,0" text_width="75" text_height="14" text_color="[white]" text_justify="center"/>
 					</rect>
 					<!--[END] Hidden when using vehicle-->
 
 					<!--Stamina Bar-->
-					<sui_toolbelt_statBar width="92" height="18" pos="151,-77" stat_type="Stamina" globalopacitymod="1.2" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="14,14" icon_pos="15,-9" text="" text_pos="28,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
+					<sui_toolbelt_statBar width="92" height="18" pos="151,-77" stat_type="Stamina" globalopacitymod="1.2" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="14,14" icon_pos="15,-9" text="{statcurrentwithmax}" text_pos="28,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
 
 					<!--Health Bar-->
-					<sui_toolbelt_statBar width="92" height="18" pos="241,-77" stat_type="Health" globalopacitymod="1.2" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="" text_pos="26,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
+					<sui_toolbelt_statBar width="92" height="18" pos="241,-77" stat_type="Health" globalopacitymod="1.2" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="{statcurrentwithmax}" text_pos="26,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
 
 					<!--Food Bar-->
-					<sui_toolbelt_simple_statBar width="92" height="18" pos="331,-77" stat_type="Food" globalopacitymod="1.25" barContent_color="0,255,54,128" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="17,-9" text="" text_pos="26,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
+					<sui_toolbelt_overfillfix_statBar width="92" height="18" pos="331,-77" stat_type="Food" globalopacitymod="1.25" barContent_color="0,255,54,128" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="17,-9" text_pos="26,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
 
 					<!--Water Bar-->
-					<sui_toolbelt_simple_statBar width="92" height="18" pos="421,-77" stat_type="Water" globalopacitymod="1.25" barContent_color="64,164,223,150" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="" text_pos="28,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
+					<sui_toolbelt_overfillfix_statBar width="92" height="18" pos="421,-77" stat_type="Water" globalopacitymod="1.25" barContent_color="64,164,223,150" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text_pos="28,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
 				</rect>
 			</rect>
 
@@ -324,8 +327,8 @@
 				</rect>
 			</rect>
 
-			<!--Mini HUD Layout 3/3-->
-			<rect name="minihudTab3" >
+			<!--Mini HUD Layout 1/3-->
+			<rect name="minihudTab1" >
 				<rect name="windowToolbelt" pos="0,11" width="753" height="78" depth="5" backgroundcolor="[black]" >
 
 					<!--[START] Hidden when using vehicle-->
@@ -339,24 +342,21 @@
 						<sui_toolbelt_doubleNoText_stealthBar pos="376,14" width="380" height="23" globalopacitymod="0.96" sprite="{staticon|once}" icon_color="[white]" icon_size="16,16" icon_pos="0,-8" />
 
 						<!--XP Bar-->
-						<sui_toolbelt_xpBar height="18" width="92" pos="511,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="{cvar($LastPlayerLevel)}" text_pos="28,-3" text_width="55" text_height="14" text_color="[white]" text_justify="center" />
-
-						<!--Toolbelt Numbers-->
-						<sui_toolbelt_numbers10 pos="0,12" cell_height="75" cell_width="75" background_pos="30,2" background_sprite="menu_tile_01" background_height="16" background_width="14" background_rotation="0" background_color="[darkestGrey]" background_pivot="center" background_globalopacity="true" background_globalopacitymod="0.93" text_pos="0,0" text_width="75" text_height="14" text_color="[white]" text_justify="center"/>
+						<sui_toolbelt_xpBar height="18" width="92" pos="511,-77" border_color="[black]" background_color="[mediumGrey]" barContent_color="{xpcolor}" filldirection="horizontal" sprite="ui_game_symbol_trophy" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="" text_pos="28,-3" text_width="55" text_height="14" text_color="[white]" text_justify="center" />
 					</rect>
 					<!--[END] Hidden when using vehicle-->
 
 					<!--Stamina Bar-->
-					<sui_toolbelt_statBar width="92" height="18" pos="151,-77" stat_type="Stamina" globalopacitymod="1.2" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="14,14" icon_pos="15,-9" text="{statcurrentwithmax}" text_pos="28,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
+					<sui_toolbelt_statBar width="92" height="18" pos="151,-77" stat_type="Stamina" globalopacitymod="1.2" barBackground_fill="{statmodifiedmax}" barContent_color="0,54,255,128" sprite="ui_game_symbol_agility" icon_color="[white]" icon_size="14,14" icon_pos="15,-9" text="" text_pos="28,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
 
 					<!--Health Bar-->
-					<sui_toolbelt_statBar width="92" height="18" pos="241,-77" stat_type="Health" globalopacitymod="1.2" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="{statcurrentwithmax}" text_pos="26,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
+					<sui_toolbelt_statBar width="92" height="18" pos="241,-77" stat_type="Health" globalopacitymod="1.2" barBackground_fill="{statmodifiedmax}" barContent_color="255,0,0,128" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="" text_pos="26,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
 
 					<!--Food Bar-->
-					<sui_toolbelt_overfillfix_statBar width="92" height="18" pos="331,-77" stat_type="Food" globalopacitymod="1.25" barContent_color="0,255,54,128" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="17,-9" text_pos="26,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
+					<sui_toolbelt_simple_statBar width="92" height="18" pos="331,-77" stat_type="Food" globalopacitymod="1.25" barContent_color="0,255,54,128" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="17,-9" text="" text_pos="26,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
 
 					<!--Water Bar-->
-					<sui_toolbelt_overfillfix_statBar width="92" height="18" pos="421,-77" stat_type="Water" globalopacitymod="1.25" barContent_color="64,164,223,150" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text_pos="28,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
+					<sui_toolbelt_simple_statBar width="92" height="18" pos="421,-77" stat_type="Water" globalopacitymod="1.25" barContent_color="64,164,223,150" filldirection="horizontal" sprite="{staticon|once}" icon_color="[white]" icon_size="13,13" icon_pos="15,-9" text="" text_pos="28,-3" text_color="[white]" text_width="55" text_height="14" text_justify="center" />
 				</rect>
 			</rect>
 		</rect>

@@ -1,0 +1,14 @@
+
+To replace the default layout for a different one just copy the config folder from the default layout of your choosing in the Alt_Configs and paste and replace the one in the mods root folder.
+
+ONLY COPY AND REPLACE.
+DO NOT DELETE THE CONFIG FOLDER IN THE MODS ROOT FOLDER(RW_SimpleUI-Toolbelt/Config).
+IT CONTAINS NEEDED FILES THAT THE ALT CONFIGS DO NOT HAVE.
+
+EXAMPLE:
+
+Copy the Config folder from the HUD with toolbelt numbers layout found below
+RW_SimpleUI-Toolbelt/Alt_Configs/HUD/2Toolbelt_Numbers/Config
+
+Then just paste and replace the mods config folder. Replace all files when asked. The folder listed below is the one you replace.
+RW_SimpleUI-Toolbelt/Config
