@@ -1,0 +1,9 @@
+<configs>
+
+	<!--Set Fire Rate Value Here-->
+	<set xpath="//item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='RoundsPerMinute']/@value">130</set>
+
+	<!--Change burst round count to be the same as all other automatic weapons-->
+	<set xpath="//item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='BurstRoundCount']/@value">1000</set>
+
+</configs>
